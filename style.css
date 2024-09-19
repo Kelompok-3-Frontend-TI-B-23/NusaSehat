@@ -34,6 +34,7 @@
 
 .name {
     font-weight: 700;
+    cursor: default;
 }
 
 .nav-links {
@@ -48,6 +49,9 @@
     color: black;
 }
 
+.nav-links a:hover {
+    color: var(--red);
+}
 /* Home */
 #home {
     padding: 2rem;
