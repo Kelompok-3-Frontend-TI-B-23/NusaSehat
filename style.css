@@ -2,6 +2,7 @@
 
 
 :root {
+    --lighter-green: #a7c957;
     --light-green: #75b22c;
     --beige: #f3e8cf;
     --red: #bb4748;
@@ -47,11 +48,15 @@
 .nav-links a {
     text-decoration: none;
     color: black;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
     color: var(--red);
+    background-color: var(--lighter-green);
 }
+
 /* Home */
 #home {
     padding: 2rem;
