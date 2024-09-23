@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --light-green: #75b22c;
+    --beige: #f3e8cf;
+    --red: #bb4748;
+}
+
+
+* {
+    padding: 0;
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Navigation bar */
+#nav-bar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--light-green);
+}
+.nav-div, .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-div {
+    justify-content: space-between;
+    align-items: center;  
+    height: 12vh;
+    font-size: 1.8rem;
+}
+
+.name {
+    font-weight: 700;
+    cursor: default;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+.container {
+    background-color: var(--beige);
+}
+
+.infoContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.info-card {
+    width: auto;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px var(--light-green);
+    overflow: hidden;
+    background-color: white;
+    margin: 10px;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    height: auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-info {
+    padding: 15px;
+    background: white;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 5px;
+}
