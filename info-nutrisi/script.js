@@ -1,6 +1,10 @@
 $(document).ready(function() {
     const infos = [
         { title: "Rendang", img: "images/rendang.jpg" },
+        { title: "Sate Ayam", img: "images/sate.jpg" },
+        { title: "Nasi Goreng", img: "images/nasgor.jpg" },
+        { title: "Batagor", img: "images/bataghor.jpg" },
+        { title: "Ayam Geprek", img: "images/geprek.png" },
         { title: "Rendang", img: "images/rendang.jpg" },
         { title: "Rendang", img: "images/rendang.jpg" },
         { title: "Rendang", img: "images/rendang.jpg" },
@@ -8,7 +12,9 @@ $(document).ready(function() {
         { title: "Rendang", img: "images/rendang.jpg" },
         { title: "Rendang", img: "images/rendang.jpg" },
         { title: "Rendang", img: "images/rendang.jpg" },
-        { title: "Rendang", img: "images/rendang.jpg" }
+        { title: "Rendang", img: "images/rendang.jpg" },
+        { title: "Rendang", img: "images/rendang.jpg" },
+        { title: "Rendang", img: "images/rendang.jpg" },
     ];
 
     const infoContainer = $('.infoContainer');

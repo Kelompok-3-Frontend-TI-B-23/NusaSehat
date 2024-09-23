@@ -55,6 +55,7 @@
 
 .container {
     background-color: var(--beige);
+    min-height: 100vh;
 }
 
 .infoContainer {
@@ -67,14 +68,14 @@
 }
 
 .info-card {
-    width: auto;
-    height: auto;
+    width: 400px; 
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 1px 1px 8px var(--light-green);
+    box-shadow: 4px 4px 8px lightgray;
     overflow: hidden;
     background-color: white;
-    margin: 10px;
+    position: relative;
+    margin: 20px;
 }
 
 .info-card:hover {
@@ -91,16 +92,18 @@
 
 .image-wrapper img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
+    border-bottom: 1px solid #ddd;
 }
 
 .info-info {
+    display: flex;
     padding: 15px;
     background: white;
     text-align: center;
 }
 
 h3 {
-    margin-top: 5px;
+    margin: auto;
 }
