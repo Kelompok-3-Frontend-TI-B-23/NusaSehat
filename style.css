@@ -169,13 +169,13 @@ button:hover {
 
 @keyframes moveUp {
     0% {
-        transform: translateY(100%); 
+        transform: translateY(30%); 
     }
 }
 
 @keyframes moveDown {
     0% {
-        transform: translateY(-100%); 
+        transform: translateY(-80%); 
     }
 }
 
