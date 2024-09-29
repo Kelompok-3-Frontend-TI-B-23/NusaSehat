@@ -6,6 +6,7 @@
     --light-green: #75b22c;
     --beige: #f3e8cf;
     --red: #bb4748;
+    --grey: #605757;
 }
 
 
@@ -15,47 +16,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-/* Navigation bar */
-#nav-bar {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: var(--light-green);
-}
-.nav-div, .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.nav-div {
-    justify-content: space-between;
-    align-items: center;  
-    height: 12vh;
-    font-size: 1.8rem;
-}
-
-.name {
-    font-weight: 700;
-    cursor: default;
-}
-
-.nav-links {
-    list-style: none;
-    gap: 2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    border-radius: 0.4rem;
-    padding: 0.5rem;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--red);
-    background-color: var(--lighter-green);
-}
 
 /* Home */
 #home {
@@ -130,7 +91,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/About-image.jpg);
+    background-image: url(assets/images/About-image.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -206,13 +167,39 @@ button:hover {
 	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
+.slider-button {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+    padding: 1rem 3rem;
+    background-color: var(--grey);
+    opacity: 0.3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.slider-button:hover {
+    background-color: var(--light-green);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ini milih class slider, trs targetin scrollbar supaya ilang */
 .slider::-webkit-scrollbar {
 	display: none;
 }
 
+/* flex-grow, flex-shrink, flex-basis */
 .slider img {
 	flex: 1 0 100%;
+    /* ini supaya scrollnya selalu mulai dari start (awal) */
 	scroll-snap-align: start;
+    /* supaya gambar uknya kea ccover, kalo kelebihan dipotong */
 	object-fit: cover;
 }
 
@@ -242,4 +229,37 @@ button:hover {
 .slider-nav a:hover {
 	opacity: 1;
     background-color: black;
+}
+.slider-nav a.active {
+    opacity: 1;
+    background-color: black; /* or another color to highlight the active indicator */
+}
+
+/* Footer */
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: var(--beige);
+}
+
+.header {
+    text-align: center;
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.social-media img {
+    width: 2rem;
 }

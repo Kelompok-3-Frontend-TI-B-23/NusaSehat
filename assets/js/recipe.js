@@ -1,17 +1,17 @@
 $(document).ready(function() {
     //  Membuat data recipe dummy
     const recipes = [
-        { title: "Recipe 1", duration: "1 hour", difficulty: "Medium", img: "images/lupakyu2.png" },
-        { title: "Recipe 2", duration: "30 minutes", difficulty: "Easy", img: "images/bakso.jpg" },
-        { title: "Recipe 3", duration: "2 hours", difficulty: "Hard", img: "images/lupakyu2.png" },
-        { title: "Recipe 4", duration: "45 minutes", difficulty: "Medium", img: "images/lupakyu2.png" },
-        { title: "Recipe 5", duration: "1 hour 15 minutes", difficulty: "Hard", img: "images/jengkol.jpg" },
-        { title: "Recipe 6", duration: "25 minutes", difficulty: "Easy", img: "images/bakso.jpg" },
-        { title: "Recipe 7", duration: "3 hours", difficulty: "Very Hard", img: "images/jengkol.jpg" },
-        { title: "Recipe 8", duration: "40 minutes", difficulty: "Medium", img: "images/lupakyu.png" },
-        { title: "Recipe 9", duration: "50 minutes", difficulty: "Medium", img: "images/jengkol.jpg" },
-        { title: "Recipe 10", duration: "1 hour 30 minutes", difficulty: "Hard", img: "images/bakso.jpg" },
-        { title: "Recipe 11", duration: "20 minutes", difficulty: "Easy", img: "images/jengkol.jpg" }
+        { title: "Recipe 1", duration: "1 hour", difficulty: "Medium", img: "../assets/images/lupakyu2.png" },
+        { title: "Recipe 2", duration: "30 minutes", difficulty: "Easy", img: "../assets/images/bakso.jpg" },
+        { title: "Recipe 3", duration: "2 hours", difficulty: "Hard", img: "../assets/images/lupakyu2.png" },
+        { title: "Recipe 4", duration: "45 minutes", difficulty: "Medium", img: "../assets/images/lupakyu2.png" },
+        { title: "Recipe 5", duration: "1 hour 15 minutes", difficulty: "Hard", img: "../assets/images/jengkol.jpg" },
+        { title: "Recipe 6", duration: "25 minutes", difficulty: "Easy", img: "../assets/images/bakso.jpg" },
+        { title: "Recipe 7", duration: "3 hours", difficulty: "Very Hard", img: "../assets/images/jengkol.jpg" },
+        { title: "Recipe 8", duration: "40 minutes", difficulty: "Medium", img: "../assets/images/lupakyu.png" },
+        { title: "Recipe 9", duration: "50 minutes", difficulty: "Medium", img: "../assets/images/jengkol.jpg" },
+        { title: "Recipe 10", duration: "1 hour 30 minutes", difficulty: "Hard", img: "../assets/images/bakso.jpg" },
+        { title: "Recipe 11", duration: "20 minutes", difficulty: "Easy", img: "../assets/images/jengkol.jpg" }
     ];
 
     const recipeContainer = $('#recipeContainer');
