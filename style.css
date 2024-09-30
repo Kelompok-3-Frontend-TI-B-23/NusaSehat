@@ -39,7 +39,8 @@
 
 .home-content {
     flex: 2; 
-    padding: 5%;/
+    padding: 5%;
+    cursor: default;
 }
 
 .home-title {
@@ -59,20 +60,25 @@
     display: flex;
     justify-content: center;
     padding: 3rem;
+    border-radius: 2rem;
 }
 
-button {
+.home-btn {
     padding: 0.8rem 1.5rem;
-    background-color: var(--light-green);
-    color: white;
-    border: none;
+    background-color: var(--beige);
+    color: black;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: 0.2rem;
+    
 }
 
-button:hover {
+.home-btn:hover {
     background-color: var(--red); 
+    transform: scale(1.1);
 }
 
 .home-image-container {
@@ -235,31 +241,140 @@ button:hover {
     background-color: black; /* or another color to highlight the active indicator */
 }
 
+/* Nutrisi */
+#nutrisi {
+    padding: 3rem 0;
+}
+
+.wrapper {
+    padding: 1rem 10%;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.box {
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0.3rem 0.3rem 1rem var(--grey);
+    /* opacity: 0.5; */
+    
+}
+
+.box img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem; /* Adjust padding */
+    text-align: center;
+    font-size: 1rem;
+    transition: height 0.5s ease-in-out; /* Smooth transition */
+    color: white;
+}
+
+
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    margin-top: 40%;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+.overlay a {
+    margin-top: 1rem;
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 0.3rem 1rem;
+}
+
+.box:hover img {
+    transform: scale(1.2);
+}
+
+.box:hover .overlay {
+    height: 100%;
+}
 /* Footer */
+footer {
+    background-color: var(--beige);
+}
 #footer-container {
     display: flex;
     flex-direction: column;
     padding: 4rem;
     justify-content: space-around;
     gap: 2rem;
-    background-color: var(--beige);
-}
-
-.header {
-    text-align: center;
 }
 
 .bottom-menu {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
+    padding-bottom: 4rem;
 }
 
+.bottom-menu li {
+    list-style: none;
+}
+.bottom-menu a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.contact {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 .social-media {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    align-items: center;
 }
-.social-media img {
-    width: 2rem;
+
+.ig-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.dc-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.tw-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.copyright {
+    text-align: center;
 }
