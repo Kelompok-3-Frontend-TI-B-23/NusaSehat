@@ -4,6 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Detail</title>
+    <link rel="stylesheet" href="assets/css/recipe-detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="recipe-detail-container">
+      <h2 id="recipe-title">Recipe Title Here</h2>
+      <img
+        id="recipe-image"
+        src="../assets/images/recipes/lupakyu2.png"
+        alt="Recipe Image"
+      />
+      <div class="details">
+        <span id="recipe-duration"><i class="fa fa-clock-o"></i> 1 hour</span>
+        <span id="recipe-difficulty"><i class="fa fa-tasks"></i> Medium</span>
+      </div>
+      <p id="recipe-description">
+        This is a delicious recipe description. You can add details about
+        ingredients and cooking instructions here.
+      </p>
+      <a href="recipe.html"
+        ><button id="back-button">Back to Recipes</button></a
+      >
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/recipe.js"></script>
+    <!-- Memastikan script yang sama digunakan -->
+  </body>
 </html>
