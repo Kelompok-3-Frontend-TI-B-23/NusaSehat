@@ -4,17 +4,7 @@ $(document).ready(function() {
         { title: "Sate Ayam", img: "../assets/images/sate.jpg" },
         { title: "Nasi Goreng", img: "../assets/images/nasgor.jpg" },
         { title: "Batagor", img: "../assets/images/bataghor.jpg" },
-        { title: "Ayam Geprek", img: "../assets/images/geprek.png" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
-        { title: "Rendang", img: "../assets/images/rendang.jpg" },
+        { title: "Ayam Geprek", img: "../assets/images/geprek.png" }
     ];
 
     const infoContainer = $('.infoContainer');
