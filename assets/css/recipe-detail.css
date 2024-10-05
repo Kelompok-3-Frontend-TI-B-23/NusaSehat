@@ -4,7 +4,7 @@ body {
 }
 
 .recipe-detail-container {
-    max-width: 800px;
+    max-width: 90%;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;

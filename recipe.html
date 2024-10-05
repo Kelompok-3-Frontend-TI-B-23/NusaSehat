@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/icon-web.png" type="image/x-icon" />
     <title>Recipe</title>
     <link rel="stylesheet" href="assets/css/recipe.css" />
+
     <!-- Buat pake icon -->
     <link
       rel="stylesheet"
@@ -13,7 +15,59 @@
   </head>
   <body>
     <nav id="nav-bar"></nav>
-    <div class="container" id="recipeContainer"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Welcome to our Recipe Collection!</h2>
+        <p>
+          Cari Alternatif Resep Sehat Makanan Indonesia asdasdasfasfasdfsdgsdfg
+        </p>
+        <div class="search-wrapper">
+          <input type="search" id="search" placeholder="Cari Resep" />
+        </div>
+      </div>
+    </section>
+
+    <h2 class="recipe-title">Filter</h2>
+    <section class="filter-wrapper">
+      <select id="duration-filter">
+        <option value="">Filter Durasi</option>
+        <option value="short">Short (0-30 menit)</option>
+        <option value="medium">Medium (31-60 menit)</option>
+        <option value="long">Long (61+ menit)</option>
+      </select>
+
+      <select id="difficulty-filter">
+        <option value="">Filter Kesulitan</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <select id="calories-filter">
+        <option value="">Filter Kalori</option>
+        <option value="low">Low (0-300 kcal)</option>
+        <option value="medium">Medium (301-600 kcal)</option>
+        <option value="high">High (601+ kcal)</option>
+      </select>
+
+      <!-- <button id="sort-duration">
+        Sort by Duration <i class="fa-solid fa-arrow-up"></i
+        ><i class="fa-solid fa-arrow-down"></i>
+      </button>
+      <button id="sort-calories">
+        Sort by Calories <i class="fa-solid fa-arrow-up"></i
+        ><i class="fa-solid fa-arrow-down"></i>
+      </button> -->
+    </section>
+
+    <div class="no-recipe"><p></p></div>
+
+    <!-- Recipe Catalog -->
+    <section class="recipes">
+      <div class="container" id="recipeContainer"></div>
+    </section>
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
