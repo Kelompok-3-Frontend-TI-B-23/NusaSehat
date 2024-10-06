@@ -8,7 +8,7 @@
 
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -25,7 +25,7 @@
 
 .nav-div {
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
     height: 12vh;
     font-size: 1.8rem;
 }
@@ -107,27 +107,18 @@
 }
 
 .hero-search input {
-    width: 300px;
+    width: 800px;
     padding: 10px;
     border: 2px solid #ddd;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     font-size: 1rem;
     outline: none;
+    transition: border-color 0.3s ease; 
 }
 
-.hero-search button {
-    padding: 10px 20px;
-    border: 2px solid #ddd;
-    border-left: none;
-    background-color: #ddd;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
+.hero-search input:focus {
+    border-color: var(--light-green);
 }
-
-.hero-search button i {
-    color: #333;
-}
-
 .container {
     background-color: var(--beige);
     min-height: 100vh;
@@ -144,7 +135,7 @@
 }
 
 .info-card {
-    width: 400px; 
+    width: 400px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 4px 4px 8px lightgray;
@@ -182,3 +173,10 @@
 h3 {
     margin: auto;
 }
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
