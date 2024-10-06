@@ -1,0 +1,625 @@
+[
+    {
+        "id": 1,
+        "title": "Rawon Sehat",
+        "duration": 75,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/rawon.jpg",
+        "description": "Rawon versi sehat dengan daging tanpa lemak, kaya rasa namun lebih rendah kalori.",
+        "calories": 320,
+        "ingredients": [
+            "200g daging sapi tanpa lemak",
+            "2 lembar daun salam",
+            "3 batang serai, memarkan",
+            "3 siung bawang putih, haluskan",
+            "4 siung bawang merah, haluskan",
+            "2 cm lengkuas, memarkan",
+            "2 sdm bumbu kluwek",
+            "Garam secukupnya",
+            "Kaldu jamur secukupnya",
+            "2 liter air"
+        ],
+        "steps": [
+            "Rebus daging sapi tanpa lemak hingga empuk, angkat dan potong-potong.",
+            "Tumis bawang putih, bawang merah, serai, daun salam, dan lengkuas hingga harum.",
+            "Tambahkan bumbu kluwek dan aduk rata.",
+            "Masukkan potongan daging, tambahkan air, garam, dan kaldu jamur.",
+            "Rebus hingga bumbu meresap dan kuah mengental.",
+            "Sajikan dengan nasi merah atau shirataki untuk pilihan lebih sehat."
+        ],
+        "nutrition": {
+            "calories": 320,
+            "carbs": 30,
+            "protein": 25,
+            "fat": 10
+        }
+    },
+    {
+        "id": 2,
+        "title": "Rendang Ayam Tanpa Santan",
+        "duration": 90,
+        "difficulty": "Hard",
+        "img": "../assets/images/recipes/rendang-ayam.jpg",
+        "description": "Rendang ayam versi rendah kalori dengan penggunaan santan nabati dan tanpa minyak berlebih.",
+        "calories": 450,
+        "ingredients": [
+            "500g ayam fillet tanpa kulit",
+            "2 batang serai, memarkan",
+            "5 lembar daun jeruk",
+            "2 lembar daun salam",
+            "200 ml santan nabati (santan kelapa rendah lemak)",
+            "1 sdt garam",
+            "1 sdm kaldu jamur",
+            "2 sdm minyak zaitun",
+            "4 siung bawang merah, haluskan",
+            "4 siung bawang putih, haluskan",
+            "3 cm jahe, memarkan",
+            "2 cm lengkuas, memarkan",
+            "Cabe merah sesuai selera"
+        ],
+        "steps": [
+            "Tumis bumbu halus, serai, daun jeruk, dan lengkuas dengan minyak zaitun hingga harum.",
+            "Masukkan ayam, aduk hingga berubah warna.",
+            "Tuangkan santan nabati, tambahkan garam dan kaldu jamur.",
+            "Masak hingga ayam empuk dan kuah mengental.",
+            "Masak hingga kuah hampir habis dan bumbu benar-benar meresap."
+        ],
+        "nutrition": {
+            "calories": 450,
+            "carbs": 10,
+            "protein": 35,
+            "fat": 28
+        }
+    },
+    {
+        "id": 3,
+        "title": "Soto Ayam Rendah Kalori",
+        "duration": 45,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/soto-ayam.jpg",
+        "description": "Soto ayam versi sehat menggunakan ayam tanpa kulit dan kaldu rendah lemak.",
+        "calories": 250,
+        "ingredients": [
+            "250g dada ayam tanpa kulit",
+            "2 batang serai, memarkan",
+            "3 siung bawang putih, haluskan",
+            "4 siung bawang merah, haluskan",
+            "2 cm lengkuas, memarkan",
+            "2 lembar daun salam",
+            "1 sdt garam",
+            "1 sdt merica",
+            "Kaldu jamur secukupnya",
+            "1 liter air",
+            "Tauge, kol, seledri untuk pelengkap"
+        ],
+        "steps": [
+            "Rebus dada ayam hingga matang, suwir-suwir dagingnya.",
+            "Tumis bumbu halus dengan serai, daun salam, dan lengkuas hingga harum.",
+            "Masukkan tumisan bumbu ke dalam air rebusan ayam.",
+            "Tambahkan garam, merica, dan kaldu jamur.",
+            "Masak hingga mendidih, sajikan dengan tauge, kol, dan seledri."
+        ],
+        "nutrition": {
+            "calories": 250,
+            "carbs": 15,
+            "protein": 28,
+            "fat": 8
+        }
+    },
+    {
+        "id": 4,
+        "title": "Gado-Gado Sayuran Panggang",
+        "duration": 30,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/gado-gado.jpg",
+        "description": "Gado-gado dengan sayuran yang dipanggang dan saus kacang yang lebih sehat.",
+        "calories": 300,
+        "ingredients": [
+            "1 buah terong, potong dadu",
+            "1 buah kentang, potong dadu",
+            "1 buah tahu putih, potong dadu",
+            "1 buah tempe, potong dadu",
+            "100g bayam",
+            "2 sdm kacang tanah sangrai",
+            "1 sdm kecap manis rendah gula",
+            "1 siung bawang putih",
+            "1/2 sdt garam",
+            "Air secukupnya"
+        ],
+        "steps": [
+            "Panggang terong, kentang, tahu, dan tempe hingga kecoklatan.",
+            "Blender kacang tanah, bawang putih, kecap manis, dan garam hingga halus.",
+            "Rebus bayam sebentar, tiriskan.",
+            "Sajikan sayuran panggang dan bayam dengan saus kacang."
+        ],
+        "nutrition": {
+            "calories": 300,
+            "carbs": 40,
+            "protein": 12,
+            "fat": 15
+        }
+    },
+    {
+        "id": 5,
+        "title": "Sate Ayam Tanpa Lemak",
+        "duration": 60,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/sate-ayam.jpg",
+        "description": "Sate ayam yang dibuat dengan dada ayam tanpa kulit dan disajikan dengan bumbu kacang rendah lemak.",
+        "calories": 380,
+        "ingredients": [
+            "500g dada ayam tanpa kulit, potong dadu",
+            "2 sdm kecap manis rendah gula",
+            "2 siung bawang putih, haluskan",
+            "1 sdm minyak zaitun",
+            "1 sdm air jeruk nipis",
+            "100g kacang tanah sangrai",
+            "2 siung bawang merah",
+            "1 sdm kecap manis rendah gula untuk bumbu kacang"
+        ],
+        "steps": [
+            "Rendam ayam dalam campuran kecap, bawang putih, minyak zaitun, dan air jeruk nipis selama 30 menit.",
+            "Tusukkan ayam pada tusuk sate, lalu panggang hingga matang.",
+            "Haluskan kacang tanah, bawang merah, dan kecap manis rendah gula untuk membuat saus kacang.",
+            "Sajikan sate ayam dengan saus kacang yang rendah lemak."
+        ],
+        "nutrition": {
+            "calories": 380,
+            "carbs": 18,
+            "protein": 35,
+            "fat": 20
+        }
+    },
+    {
+        "id": 6,
+        "title": "Pempek Ikan Panggang",
+        "duration": 50,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/pempek.jpg",
+        "description": "Pempek yang dipanggang dan dibuat dengan bahan ikan rendah lemak serta saus cuka tanpa gula.",
+        "calories": 280,
+        "ingredients": [
+            "300g ikan tenggiri tanpa lemak, haluskan",
+            "100g tepung sagu",
+            "1 siung bawang putih, haluskan",
+            "1 butir telur",
+            "Garam secukupnya",
+            "1 sdm air jeruk nipis",
+            "200ml air untuk adonan",
+            "Cuko: 100ml air asam jawa, 1 sdm gula rendah kalori, 2 siung bawang putih, 1 sdt cabai halus"
+        ],
+        "steps": [
+            "Campurkan ikan tenggiri, bawang putih, telur, garam, air, dan tepung sagu. Aduk rata.",
+            "Bentuk adonan menjadi pempek lonjong atau bulat.",
+            "Panggang pempek hingga matang dan sedikit kecoklatan.",
+            "Untuk cuko, rebus air asam jawa dengan bawang putih dan cabai halus, tambahkan gula rendah kalori.",
+            "Sajikan pempek dengan cuko rendah kalori."
+        ],
+        "nutrition": {
+            "calories": 280,
+            "carbs": 30,
+            "protein": 20,
+            "fat": 8
+        }
+    },
+    {
+        "id": 7,
+        "title": "Nasi Uduk Beras Merah",
+        "duration": 40,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/nasi-uduk-merah.jpg",
+        "description": "Nasi uduk yang dibuat dengan beras merah dan santan nabati untuk pilihan lebih sehat dan rendah kalori.",
+        "calories": 320,
+        "ingredients": [
+            "200g beras merah",
+            "200ml santan nabati rendah lemak",
+            "2 lembar daun salam",
+            "2 batang serai, memarkan",
+            "Garam secukupnya",
+            "1 liter air"
+        ],
+        "steps": [
+            "Cuci beras merah hingga bersih.",
+            "Rebus air dengan santan nabati, daun salam, serai, dan garam hingga mendidih.",
+            "Masukkan beras merah, masak hingga air menyusut dan beras matang.",
+            "Sajikan nasi uduk beras merah dengan lauk sehat seperti tahu, tempe, atau ayam panggang."
+        ],
+        "nutrition": {
+            "calories": 320,
+            "carbs": 50,
+            "protein": 7,
+            "fat": 8
+        }
+    },
+    {
+        "id": 8,
+        "title": "Opor Ayam Tanpa Santan",
+        "duration": 60,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/opor-ayam.jpg",
+        "description": "Opor ayam tanpa santan, dibuat dengan bumbu rempah lengkap dan kaldu ayam rendah lemak.",
+        "calories": 330,
+        "ingredients": [
+            "500g ayam tanpa kulit",
+            "2 batang serai, memarkan",
+            "4 siung bawang putih, haluskan",
+            "5 siung bawang merah, haluskan",
+            "2 cm jahe, memarkan",
+            "3 lembar daun jeruk",
+            "500ml kaldu ayam rendah lemak",
+            "Garam secukupnya",
+            "1 sdt kunyit bubuk"
+        ],
+        "steps": [
+            "Rebus ayam hingga matang, sisihkan kaldu.",
+            "Tumis bumbu halus bersama serai, jahe, dan daun jeruk hingga harum.",
+            "Tambahkan ayam dan kaldu ayam rendah lemak, masak hingga kuah mengental.",
+            "Sajikan dengan lontong atau nasi merah untuk pilihan lebih sehat."
+        ],
+        "nutrition": {
+            "calories": 330,
+            "carbs": 10,
+            "protein": 40,
+            "fat": 10
+        }
+    },
+    {
+        "id": 9,
+        "title": "Bakso Ayam Sehat",
+        "duration": 45,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/bakso-ayam.jpg",
+        "description": "Bakso ayam yang dibuat dengan daging ayam tanpa kulit dan kaldu sayuran untuk sup rendah kalori.",
+        "calories": 270,
+        "ingredients": [
+            "300g daging ayam tanpa kulit, haluskan",
+            "100g tepung tapioka",
+            "1 butir putih telur",
+            "2 siung bawang putih, haluskan",
+            "Garam secukupnya",
+            "500ml kaldu sayuran",
+            "Tauge, sawi hijau, dan bihun untuk pelengkap"
+        ],
+        "steps": [
+            "Campurkan daging ayam, putih telur, tepung tapioka, dan bawang putih, aduk hingga merata.",
+            "Bentuk adonan menjadi bulatan kecil-kecil.",
+            "Rebus bakso dalam kaldu sayuran hingga matang.",
+            "Sajikan bakso dengan tauge, sawi hijau, dan bihun rendah kalori."
+        ],
+        "nutrition": {
+            "calories": 270,
+            "carbs": 15,
+            "protein": 30,
+            "fat": 8
+        }
+    },
+    {
+        "id": 10,
+        "title": "Gudeg Sehat Tanpa Santan",
+        "duration": 120,
+        "difficulty": "Hard",
+        "img": "../assets/images/recipes/gudeg.jpg",
+        "description": "Gudeg yang dimasak tanpa santan, menggunakan nangka muda dan rempah yang sehat.",
+        "calories": 290,
+        "ingredients": [
+            "500g nangka muda",
+            "2 lembar daun salam",
+            "3 batang serai, memarkan",
+            "4 siung bawang merah, haluskan",
+            "2 siung bawang putih, haluskan",
+            "1 sdt ketumbar bubuk",
+            "1 sdm kecap manis rendah gula",
+            "500ml air"
+        ],
+        "steps": [
+            "Rebus nangka muda hingga empuk, tiriskan.",
+            "Tumis bumbu halus, serai, dan daun salam hingga harum.",
+            "Masukkan nangka muda, tambahkan air dan kecap manis rendah gula.",
+            "Masak hingga bumbu meresap dan kuah menyusut.",
+            "Sajikan dengan nasi merah atau lontong."
+        ],
+        "nutrition": {
+            "calories": 290,
+            "carbs": 40,
+            "protein": 5,
+            "fat": 8
+        }
+    },
+    {
+        "id": 11,
+        "title": "Sate Lilit Ayam Sehat",
+        "duration": 60,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/sate-lilit.jpg",
+        "description": "Sate lilit versi sehat dengan ayam tanpa lemak dan bumbu rempah tanpa minyak.",
+        "calories": 350,
+        "ingredients": [
+            "300g daging ayam tanpa lemak, haluskan",
+            "1 butir putih telur",
+            "3 siung bawang putih, haluskan",
+            "2 siung bawang merah, haluskan",
+            "2 batang serai, ambil bagian putih, memarkan",
+            "1 sdt garam",
+            "2 sdt merica"
+        ],
+        "steps": [
+            "Campurkan daging ayam, putih telur, bawang putih, bawang merah, garam, dan merica hingga rata.",
+            "Lilitkan adonan ayam pada batang serai.",
+            "Panggang sate lilit hingga matang dan kecoklatan.",
+            "Sajikan dengan sambal matah untuk pilihan lebih sehat."
+        ],
+        "nutrition": {
+            "calories": 350,
+            "carbs": 10,
+            "protein": 40,
+            "fat": 18
+        }
+    },
+    {
+        "id": 12,
+        "title": "Sayur Lodeh Rendah Kalori",
+        "duration": 50,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/sayur-lodeh.jpg",
+        "description": "Sayur lodeh dengan bahan-bahan rendah kalori dan menggunakan santan nabati.",
+        "calories": 250,
+        "ingredients": [
+            "200g labu siam, potong dadu",
+            "100g kacang panjang, potong kecil",
+            "1 buah terong, potong dadu",
+            "100ml santan nabati rendah lemak",
+            "2 siung bawang putih, haluskan",
+            "3 siung bawang merah, haluskan",
+            "1 batang serai, memarkan",
+            "2 cm lengkuas, memarkan",
+            "Garam dan kaldu jamur secukupnya"
+        ],
+        "steps": [
+            "Tumis bawang putih, bawang merah, serai, dan lengkuas hingga harum.",
+            "Masukkan semua sayuran, aduk rata.",
+            "Tuangkan santan nabati dan tambahkan garam serta kaldu jamur.",
+            "Masak hingga sayuran empuk dan bumbu meresap."
+        ],
+        "nutrition": {
+            "calories": 250,
+            "carbs": 30,
+            "protein": 6,
+            "fat": 12
+        }
+    },
+    {
+        "id": 13,
+        "title": "Tumis Kangkung Tanpa Minyak",
+        "duration": 20,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/kangkung.jpg",
+        "description": "Tumis kangkung tanpa minyak menggunakan teknik tumis air yang sehat.",
+        "calories": 100,
+        "ingredients": [
+            "200g kangkung segar",
+            "2 siung bawang putih, iris tipis",
+            "1 siung bawang merah, iris tipis",
+            "1 sdt saus tiram rendah sodium",
+            "Air secukupnya"
+        ],
+        "steps": [
+            "Panaskan wajan dengan sedikit air, masukkan bawang putih dan bawang merah.",
+            "Tambahkan kangkung dan tumis hingga layu.",
+            "Masukkan saus tiram rendah sodium, aduk hingga rata.",
+            "Angkat dan sajikan segera."
+        ],
+        "nutrition": {
+            "calories": 100,
+            "carbs": 15,
+            "protein": 4,
+            "fat": 2
+        }
+    },
+    {
+        "id": 14,
+        "title": "Pecel Sayur dengan Bumbu Kacang Sehat",
+        "duration": 30,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/pecel-sayur.jpg",
+        "description": "Pecel sayur dengan bumbu kacang yang dibuat tanpa minyak dan rendah gula.",
+        "calories": 220,
+        "ingredients": [
+            "100g bayam",
+            "100g tauge",
+            "100g kacang panjang",
+            "50g tempe, kukus",
+            "2 sdm kacang tanah sangrai",
+            "1 sdm kecap manis rendah gula",
+            "1 siung bawang putih, haluskan",
+            "Air secukupnya"
+        ],
+        "steps": [
+            "Rebus semua sayuran hingga matang, tiriskan.",
+            "Blender kacang tanah, bawang putih, kecap manis, dan sedikit air hingga halus.",
+            "Sajikan sayuran dengan bumbu kacang sehat."
+        ],
+        "nutrition": {
+            "calories": 220,
+            "carbs": 20,
+            "protein": 10,
+            "fat": 12
+        }
+    },
+    {
+        "id": 15,
+        "title": "Bubur Ayam Sehat",
+        "duration": 40,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/bubur-ayam.jpg",
+        "description": "Bubur ayam dengan kaldu rendah lemak dan topping ayam tanpa kulit serta cakwe panggang.",
+        "calories": 260,
+        "ingredients": [
+            "100g beras putih",
+            "500ml kaldu ayam rendah lemak",
+            "100g daging ayam tanpa kulit, suwir",
+            "1 batang serai, memarkan",
+            "1 sdt garam",
+            "1 siung bawang putih, cincang"
+        ],
+        "steps": [
+            "Masak beras dengan kaldu ayam hingga menjadi bubur.",
+            "Tumis bawang putih dan serai hingga harum, masukkan ke dalam bubur.",
+            "Tambahkan ayam suwir dan cakwe panggang sebagai topping.",
+            "Sajikan hangat dengan kecap manis rendah gula."
+        ],
+        "nutrition": {
+            "calories": 260,
+            "carbs": 40,
+            "protein": 18,
+            "fat": 6
+        }
+    },
+    {
+        "id": 16,
+        "title": "Karedok Sayur Segar",
+        "duration": 25,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/karedok.jpg",
+        "description": "Karedok yang segar dengan sayuran mentah dan bumbu kacang yang sehat.",
+        "calories": 180,
+        "ingredients": [
+            "100g kacang panjang, iris tipis",
+            "100g tauge",
+            "50g mentimun, iris tipis",
+            "1 buah terong kecil, iris tipis",
+            "2 sdm kacang tanah sangrai",
+            "1 sdm kecap manis rendah gula",
+            "1 siung bawang putih"
+        ],
+        "steps": [
+            "Campurkan semua sayuran mentah dalam mangkuk.",
+            "Blender kacang tanah, bawang putih, dan kecap manis hingga halus.",
+            "Sajikan sayuran dengan bumbu kacang yang sehat."
+        ],
+        "nutrition": {
+            "calories": 180,
+            "carbs": 25,
+            "protein": 6,
+            "fat": 8
+        }
+    },
+    {
+        "id": 17,
+        "title": "Ayam Panggang Rica-Rica",
+        "duration": 70,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/ayam-rica.jpg",
+        "description": "Ayam panggang rica-rica yang dibuat tanpa minyak berlebih dan menggunakan ayam tanpa kulit.",
+        "calories": 340,
+        "ingredients": [
+            "500g ayam tanpa kulit",
+            "5 buah cabai merah, haluskan",
+            "4 siung bawang merah, haluskan",
+            "3 siung bawang putih, haluskan",
+            "2 batang serai, memarkan",
+            "2 sdm minyak zaitun",
+            "1 sdt garam"
+        ],
+        "steps": [
+            "Rendam ayam dengan bumbu halus dan minyak zaitun selama 30 menit.",
+            "Panggang ayam hingga matang dan kecoklatan.",
+            "Sajikan dengan nasi merah atau sayuran rebus."
+        ],
+        "nutrition": {
+            "calories": 340,
+            "carbs": 5,
+            "protein": 40,
+            "fat": 16
+        }
+    },
+    {
+        "id": 18,
+        "title": "Sup Ikan Sehat",
+        "duration": 40,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/sup-ikan.jpg",
+        "description": "Sup ikan dengan bumbu rempah yang ringan dan rendah lemak, cocok untuk diet sehat.",
+        "calories": 230,
+        "ingredients": [
+            "300g fillet ikan kakap",
+            "1 batang serai, memarkan",
+            "3 siung bawang putih, haluskan",
+            "2 siung bawang merah, haluskan",
+            "2 cm jahe, memarkan",
+            "500ml air",
+            "1 sdt garam",
+            "1 sdt kaldu jamur"
+        ],
+        "steps": [
+            "Rebus air dengan serai, bawang putih, bawang merah, dan jahe hingga mendidih.",
+            "Masukkan ikan kakap, tambahkan garam dan kaldu jamur.",
+            "Masak hingga ikan matang dan bumbu meresap.",
+            "Sajikan sup ikan dengan nasi merah."
+        ],
+        "nutrition": {
+            "calories": 230,
+            "carbs": 10,
+            "protein": 35,
+            "fat": 6
+        }
+    },
+    {
+        "id": 19,
+        "title": "Mie Goreng Shirataki",
+        "duration": 30,
+        "difficulty": "Easy",
+        "img": "../assets/images/recipes/mie-shirataki.jpg",
+        "description": "Mie goreng yang rendah kalori menggunakan mie shirataki sebagai pengganti mie biasa.",
+        "calories": 150,
+        "ingredients": [
+            "200g mie shirataki, rebus dan tiriskan",
+            "1 butir telur",
+            "2 siung bawang putih, cincang",
+            "1 sdm kecap manis rendah gula",
+            "1 sdm saus tiram rendah sodium",
+            "1 sdt minyak zaitun",
+            "Tauge dan sawi hijau untuk pelengkap"
+        ],
+        "steps": [
+            "Tumis bawang putih dengan minyak zaitun hingga harum.",
+            "Masukkan telur dan orak-arik hingga matang.",
+            "Tambahkan mie shirataki, kecap manis, dan saus tiram, aduk rata.",
+            "Tambahkan tauge dan sawi hijau, masak sebentar hingga sayuran layu."
+        ],
+        "nutrition": {
+            "calories": 150,
+            "carbs": 10,
+            "protein": 10,
+            "fat": 6
+        }
+    },
+    {
+        "id": 20,
+        "title": "Ikan Bakar Sambal Matah",
+        "duration": 50,
+        "difficulty": "Medium",
+        "img": "../assets/images/recipes/ikan-matah.jpg",
+        "description": "Ikan bakar yang dibuat tanpa minyak dengan sambal matah segar sebagai pendamping.",
+        "calories": 320,
+        "ingredients": [
+            "500g ikan kembung, bersihkan",
+            "2 batang serai, memarkan",
+            "4 siung bawang merah, iris tipis",
+            "3 siung bawang putih, haluskan",
+            "3 buah cabai merah, iris tipis",
+            "1 buah jeruk nipis",
+            "Garam secukupnya"
+        ],
+        "steps": [
+            "Lumuri ikan dengan garam dan perasan jeruk nipis, bakar hingga matang.",
+            "Campurkan bawang merah, cabai, bawang putih, dan serai untuk membuat sambal matah.",
+            "Sajikan ikan bakar dengan sambal matah segar."
+        ],
+        "nutrition": {
+            "calories": 320,
+            "carbs": 5,
+            "protein": 45,
+            "fat": 12
+        }
+    }
+]
