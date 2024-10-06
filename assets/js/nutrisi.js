@@ -23,22 +23,17 @@ $(document).ready(function() {
         infoContainer.append(infoCard);
     });
 
-    // Search feature
-    $('#search-button').on('click', function() {
-        const searchValue = $('#search-input').val().toLowerCase();
-        $('.info-card').each(function() {
-            const title = $(this).data('title').toLowerCase();
-            if (title.includes(searchValue)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-    });
-
     $('#search-input').on('keypress', function(event) {
-        if (event.which === 13) { // Enter key
-            $('#search-button').click();
+        if (event.which === 13) {
+            const searchValue = $('#search-input').val().toLowerCase();
+            $('.info-card').each(function() {
+                const title = $(this).data('title').toLowerCase();
+                if (title.includes(searchValue)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
         }
     });
 
