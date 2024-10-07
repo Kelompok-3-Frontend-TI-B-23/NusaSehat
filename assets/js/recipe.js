@@ -1,22 +1,41 @@
 $(document).ready(function() {
     const recipeContainer = $('#recipeContainer');
+    const recommendedContainer = $('#recommendedRecipes');
+    const loadMoreBtn = $('.load-more');
+    let displayedRecipes = 0; // Jumlah resep yang ditampilkan
+    const recipesPerPage = 6; // Menampilkan 6 resep per halaman untuk default pagiantion
 
     // Fetch data dari file JSON
     $.getJSON('../assets/data/recipes.json', function(recipes) {
-        // Display semua recipe
-        displayRecipes(recipes);
+        // Acak resep sebelum ditampilkan
+        const shuffledRecipes = shuffleArray([...recipes]); // Untuk mengshuffle array untuk rekomendasi resep di recipe detail
+        
+        // Display 6 resep default pertama
+        displayRecipes(shuffledRecipes, true);
+
+        // Event listener untuk tombol "Lebih Banyak"
+        loadMoreBtn.on('click', function() {
+            displayRecipes(shuffledRecipes, false);
+        });
 
         // Event listener funtuk search bar
         $('#search').on('input', function() {
             const value = $(this).val().toLowerCase();
-            const filteredRecipes = recipes.filter(recipe => 
+            const filteredRecipes = shuffledRecipes.filter(recipe => 
                 recipe.title.toLowerCase().includes(value)
             );
-            displayRecipes(filteredRecipes);
+            displayedRecipes = 0;
+            displayRecipes(filteredRecipes, true);
         });
 
         // Event listener untuk routing ke halaman recipe detail
         recipeContainer.on('click', '.recipe-card', function() {
+            const recipeId = $(this).data('id');
+            window.location.href = `recipe-detail.html?id=${recipeId}`;
+        });
+
+        // Event listener untuk routing ke halaman recipe detail pada rekomendasi
+        recommendedContainer.on('click', '.recipe-card', function() {
             const recipeId = $(this).data('id');
             window.location.href = `recipe-detail.html?id=${recipeId}`;
         });
@@ -27,23 +46,28 @@ $(document).ready(function() {
             $(this).toggleClass('favorited');
         });
 
+        // Untuk membuat favorite button berubah warna di rekomendasi resep
+        recommendedContainer.on('click', '.favorite-btn', function(event) {
+            event.stopPropagation(); // Mencegah ke halaamn recipe detail apabla tombol favorite diklik
+            $(this).toggleClass('favorited');
+        });
+
         // Check apakah lagi di recipe detail?
         if (window.location.pathname.includes('recipe-detail.html')) {
             const urlParams = new URLSearchParams(window.location.search);
             const recipeId = parseInt(urlParams.get('id'), 10);
-            const recipe = recipes.find(r => r.id === recipeId);
+            const recipe = shuffledRecipes.find(r => r.id === recipeId);
 
             // Kalau resepny ada, tampilkan
             if (recipe) {
-                $('#recipe-title').text(recipe.title);
-                $('#recipe-image').attr('src', recipe.img);
+                $('.recipe-detail-title').text(recipe.title);
+                $('.recipe-image').attr('src', recipe.img);
                 $('#recipe-duration').html(`<i class="fa fa-clock-o"></i> ${recipe.duration} minutes`);
                 $('#recipe-difficulty').html(`<i class="fa fa-tasks"></i> ${recipe.difficulty}`);
                 $('#recipe-calories').html(`<i class="fa fa-fire"></i> ${recipe.nutrition.calories} kcal`);
-
+                $('#recipe-serving').html(`<i class="fa fa-user"></i> ${recipe.serving}  orang`);
 
                 $('#recipe-description').text(recipe.description);
-                
 
                 // Menampilkan bahan bahan
                 recipe.ingredients.forEach(ingredient => {
@@ -65,7 +89,8 @@ $(document).ready(function() {
                     $('#nutrition-table').hide(); // Kalo g ada info nutrisi
                 }
 
-
+                // Tampilkan rekomendasi resep lainnya
+                displayRecommendedRecipes(shuffledRecipes, recipeId);
             } else {
                 $('#recipe-title').text('Recipe not found');
                 $('#recipe-description').text('No details available for this recipe.');
@@ -95,7 +120,7 @@ $(document).ready(function() {
             const difficultyFilter = $('#difficulty-filter').val();
             const caloriesFilter = $('#calories-filter').val();
 
-            let filteredRecipes = recipes.filter(recipe => {
+            let filteredRecipes = shuffledRecipes.filter(recipe => {
                 const matchesSearch = recipe.title.toLowerCase().includes(searchValue);
                 const matchesDuration = matchDuration(recipe.duration, durationFilter);
                 const matchesDifficulty = !difficultyFilter || recipe.difficulty.toLowerCase() === difficultyFilter.toLowerCase();
@@ -104,7 +129,8 @@ $(document).ready(function() {
                 return matchesSearch && matchesDuration && matchesDifficulty && matchesCalories;
             });
 
-            displayRecipes(filteredRecipes);
+            displayedRecipes = 0;
+            displayRecipes(filteredRecipes, true);
         }
 
         // Fungsi filter durasi masak
@@ -135,45 +161,101 @@ $(document).ready(function() {
             }
         }
 
-        // Fungsi mendisplay recipe
-        function displayRecipes(recipes) {
-            recipeContainer.empty(); // Mengosognkan kontainer
+        // Fungsi mendisplay recipe dengan pagination
+        function displayRecipes(recipes, reset = false) {
+            if (reset) {
+                // Kosongkan kontainer jika reset
+                recipeContainer.empty();
+                displayedRecipes = 0;
+            }
+
+            // Jika tidak ada resep yang sesuai
             if (recipes.length === 0) {
-                $('.no-recipe').show().find('p').text('Resep Tidak Ditemukan'); // Show kalo resep ga ada
+                 // Menampilkan pesan jika resep tidak ada
+                $('.no-recipe').show().find('p').text('Resep Tidak Ditemukan');
                 return;
             } else {
-                $('.no-recipe').hide(); // Kalo resep ada di hide
+                // Menyembunyikan pesan jika ada resep
+                $('.no-recipe').hide(); 
             }
-            
-            $.each(recipes, function(index, recipe) {
+
+            const nextRecipes = recipes.slice(displayedRecipes, displayedRecipes + recipesPerPage);
+            $.each(nextRecipes, function(index, recipe) {
                 const recipeCard = `
-                <div class="recipe-card" data-id="${recipe.id}">
-                    <div class="image-wrapper">
-                        <img src="${recipe.img}" alt="Recipe Image" />
-                        <button class="favorite-btn"><i class="fa fa-heart"></i></button>
-                    </div>
-                    <div class="recipe-info">
-                        <div class="details">
-                            <button><i class="fa fa-clock-o"></i>${recipe.duration} menit</button>
-                            <button><i class="fa fa-tasks"></i>${recipe.difficulty}</button>
-                            <button><i class="fa fa-fire"></i>${recipe.calories} kcal</button>
+                    <div class="recipe-card" data-id="${recipe.id}">
+                        <div class="image-wrapper">
+                            <img src="${recipe.img}" alt="Recipe Image" />
+                            <button class="favorite-btn"><i class="fa fa-heart"></i></button>
                         </div>
-                        <h3>${recipe.title}</h3>
+                        <div class="recipe-info">
+                            <div class="details">
+                                <button><i class="fa fa-clock-o"></i>${recipe.duration} menit</button>
+                                <button><i class="fa fa-tasks"></i>${recipe.difficulty}</button>
+                                <button><i class="fa fa-fire"></i>${recipe.calories} kcal</button>
+                            </div>
+                            <h3>${recipe.title}</h3>
+                        </div>
                     </div>
-                </div>
                 `;
                 recipeContainer.append(recipeCard);
             });
+
+            displayedRecipes += nextRecipes.length;
+
+            // Sembunyikan tombol "Lebih Banyak" jika semua resep telah ditampilkan
+            if (displayedRecipes >= recipes.length) {
+                loadMoreBtn.hide();
+            } else {
+                loadMoreBtn.show();
+            }
+        }
+
+        // Fungsi untuk menampilkan rekomendasi resep
+        function displayRecommendedRecipes(recipes, currentRecipeId) {
+            recommendedContainer.empty(); 
+            // Filter agar tidak menampilkan resep yang sedang dilihat
+            const recommendations = recipes.filter(recipe => recipe.id !== currentRecipeId);
+
+             // Untuk ambil 3 resep secara acak
+            const selectedRecommendations = shuffleArray(recommendations).slice(0, 3);
+            $.each(selectedRecommendations, function(index, recipe) {
+                const recipeCard = `
+                    <div class="recipe-card" data-id="${recipe.id}">
+                        <div class="image-wrapper">
+                            <img src="${recipe.img}" alt="Recipe Image" />
+                            <button class="favorite-btn"><i class="fa fa-heart"></i></button>
+                        </div>
+                        <div class="recipe-info">
+                            <div class="details">
+                                <button><i class="fa fa-clock-o"></i>${recipe.duration} menit</button>
+                                <button><i class="fa fa-tasks"></i>${recipe.difficulty}</button>
+                                <button><i class="fa fa-fire"></i>${recipe.calories} kcal</button>
+                            </div>
+                            <h3>${recipe.title}</h3>
+                        </div>
+                    </div>
+                `;
+                recommendedContainer.append(recipeCard); 
+            });
+        }
+
+        // Fungsi untuk mengacak urutan array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
     });
 
-    // // Sort by durasi masak
+    // Sort by durasi masak
     // $('#sort-duration').on('click', function() {
     //     const sortedRecipes = [...recipes].sort((a, b) => a.duration - b.duration);
     //     displayRecipes(sortedRecipes);
     // });
 
-    // // Sort by kalori
+    // Sort by kalori
     // $('#sort-calories').on('click', function() {
     //     const sortedRecipes = [...recipes].sort((a, b) => a.calories - b.calories);
     //     displayRecipes(sortedRecipes);

@@ -14,31 +14,34 @@
   <body>
     <nav id="nav-bar"></nav>
     <div class="recipe-detail-container">
-      <h2 id="recipe-title"></h2>
+      <h2 class="recipe-detail-title"></h2>
+      <div class="details">
+        <span id="recipe-duration"><i class="fa fa-clock-o"></i></span>
+        <span id="recipe-difficulty"><i class="fa fa-tasks"></i></span>
+        <span id="recipe-calories"><i class="fa fa-fire"></i> </span>
+        <span id="recipe-serving"><i class="fa fa-user"></i> </span>
+      </div>
+
       <img
-        id="recipe-image"
+        class="recipe-image"
         src="../assets/images/recipes/lupakyu2.png"
         alt="Recipe Image"
       />
 
       <!-- Detail -->
-      <div class="details">
-        <span id="recipe-duration"><i class="fa fa-clock-o"></i></span>
-        <span id="recipe-difficulty"><i class="fa fa-tasks"></i></span>
-        <span id="recipe-calories"><i class="fa fa-fire"></i> </span>
-      </div>
+
       <p id="recipe-description"></p>
 
       <!-- Ingredients -->
-      <h3>Ingredients</h3>
+      <h3>Bahan-bahan</h3>
       <ul id="recipe-ingredients"></ul>
 
       <!-- Steps -->
-      <h3>Steps</h3>
+      <h3>Langkah-langkah</h3>
       <ol id="recipe-steps"></ol>
 
       <!-- Nutrition -->
-      <h3>Nutrition</h3>
+      <h3>Info Nutrisi</h3>
       <table id="nutrition-table">
         <tr>
           <th>Calories</th>
@@ -57,6 +60,11 @@
           <td id="fat"></td>
         </tr>
       </table>
+
+      <div class="recommended">
+        <h3 class="recommended-title">Rekomendasi Resep Lainnya</h3>
+        <div class="container" id="recommendedRecipes"></div>
+      </div>
 
       <!-- Back to recipe -->
       <a href="recipe.html">

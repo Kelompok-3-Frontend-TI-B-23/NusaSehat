@@ -7,6 +7,7 @@
         "img": "../assets/images/recipes/rawon.jpg",
         "description": "Rawon versi sehat dengan daging tanpa lemak, kaya rasa namun lebih rendah kalori.",
         "calories": 320,
+        "serving": 4,  
         "ingredients": [
             "200g daging sapi tanpa lemak",
             "2 lembar daun salam",
@@ -42,6 +43,7 @@
         "img": "../assets/images/recipes/rendang-ayam.jpg",
         "description": "Rendang ayam versi rendah kalori dengan penggunaan santan nabati dan tanpa minyak berlebih.",
         "calories": 450,
+        "serving": 4,  
         "ingredients": [
             "500g ayam fillet tanpa kulit",
             "2 batang serai, memarkan",
@@ -79,6 +81,7 @@
         "img": "../assets/images/recipes/soto-ayam.jpg",
         "description": "Soto ayam versi sehat menggunakan ayam tanpa kulit dan kaldu rendah lemak.",
         "calories": 250,
+        "serving": 3, 
         "ingredients": [
             "250g dada ayam tanpa kulit",
             "2 batang serai, memarkan",
@@ -114,6 +117,7 @@
         "img": "../assets/images/recipes/gado-gado.jpg",
         "description": "Gado-gado dengan sayuran yang dipanggang dan saus kacang yang lebih sehat.",
         "calories": 300,
+        "serving": 2,  
         "ingredients": [
             "1 buah terong, potong dadu",
             "1 buah kentang, potong dadu",
@@ -147,6 +151,7 @@
         "img": "../assets/images/recipes/sate-ayam.jpg",
         "description": "Sate ayam yang dibuat dengan dada ayam tanpa kulit dan disajikan dengan bumbu kacang rendah lemak.",
         "calories": 380,
+        "serving": 3, 
         "ingredients": [
             "500g dada ayam tanpa kulit, potong dadu",
             "2 sdm kecap manis rendah gula",
@@ -178,6 +183,7 @@
         "img": "../assets/images/recipes/pempek.jpg",
         "description": "Pempek yang dipanggang dan dibuat dengan bahan ikan rendah lemak serta saus cuka tanpa gula.",
         "calories": 280,
+        "serving": 3, 
         "ingredients": [
             "300g ikan tenggiri tanpa lemak, haluskan",
             "100g tepung sagu",
@@ -210,6 +216,7 @@
         "img": "../assets/images/recipes/nasi-uduk-merah.jpg",
         "description": "Nasi uduk yang dibuat dengan beras merah dan santan nabati untuk pilihan lebih sehat dan rendah kalori.",
         "calories": 320,
+        "serving": 3, 
         "ingredients": [
             "200g beras merah",
             "200ml santan nabati rendah lemak",
@@ -239,6 +246,7 @@
         "img": "../assets/images/recipes/opor-ayam.jpg",
         "description": "Opor ayam tanpa santan, dibuat dengan bumbu rempah lengkap dan kaldu ayam rendah lemak.",
         "calories": 330,
+        "serving": 4,  
         "ingredients": [
             "500g ayam tanpa kulit",
             "2 batang serai, memarkan",
@@ -271,6 +279,7 @@
         "img": "../assets/images/recipes/bakso-ayam.jpg",
         "description": "Bakso ayam yang dibuat dengan daging ayam tanpa kulit dan kaldu sayuran untuk sup rendah kalori.",
         "calories": 270,
+        "serving": 4,  
         "ingredients": [
             "300g daging ayam tanpa kulit, haluskan",
             "100g tepung tapioka",
@@ -301,6 +310,7 @@
         "img": "../assets/images/recipes/gudeg.jpg",
         "description": "Gudeg yang dimasak tanpa santan, menggunakan nangka muda dan rempah yang sehat.",
         "calories": 290,
+        "serving": 4,  
         "ingredients": [
             "500g nangka muda",
             "2 lembar daun salam",
@@ -333,6 +343,7 @@
         "img": "../assets/images/recipes/sate-lilit.jpg",
         "description": "Sate lilit versi sehat dengan ayam tanpa lemak dan bumbu rempah tanpa minyak.",
         "calories": 350,
+        "serving": 3, 
         "ingredients": [
             "300g daging ayam tanpa lemak, haluskan",
             "1 butir putih telur",
@@ -363,6 +374,7 @@
         "img": "../assets/images/recipes/sayur-lodeh.jpg",
         "description": "Sayur lodeh dengan bahan-bahan rendah kalori dan menggunakan santan nabati.",
         "calories": 250,
+        "serving": 3, 
         "ingredients": [
             "200g labu siam, potong dadu",
             "100g kacang panjang, potong kecil",
@@ -395,6 +407,7 @@
         "img": "../assets/images/recipes/kangkung.jpg",
         "description": "Tumis kangkung tanpa minyak menggunakan teknik tumis air yang sehat.",
         "calories": 100,
+        "serving": 2,  
         "ingredients": [
             "200g kangkung segar",
             "2 siung bawang putih, iris tipis",
@@ -423,6 +436,7 @@
         "img": "../assets/images/recipes/pecel-sayur.jpg",
         "description": "Pecel sayur dengan bumbu kacang yang dibuat tanpa minyak dan rendah gula.",
         "calories": 220,
+        "serving": 2,  
         "ingredients": [
             "100g bayam",
             "100g tauge",
@@ -453,6 +467,7 @@
         "img": "../assets/images/recipes/bubur-ayam.jpg",
         "description": "Bubur ayam dengan kaldu rendah lemak dan topping ayam tanpa kulit serta cakwe panggang.",
         "calories": 260,
+        "serving": 2,  
         "ingredients": [
             "100g beras putih",
             "500ml kaldu ayam rendah lemak",
@@ -482,6 +497,7 @@
         "img": "../assets/images/recipes/karedok.jpg",
         "description": "Karedok yang segar dengan sayuran mentah dan bumbu kacang yang sehat.",
         "calories": 180,
+        "serving": 2,  
         "ingredients": [
             "100g kacang panjang, iris tipis",
             "100g tauge",
@@ -511,6 +527,7 @@
         "img": "../assets/images/recipes/ayam-rica.jpg",
         "description": "Ayam panggang rica-rica yang dibuat tanpa minyak berlebih dan menggunakan ayam tanpa kulit.",
         "calories": 340,
+        "serving": 4,  
         "ingredients": [
             "500g ayam tanpa kulit",
             "5 buah cabai merah, haluskan",
@@ -540,6 +557,7 @@
         "img": "../assets/images/recipes/sup-ikan.jpg",
         "description": "Sup ikan dengan bumbu rempah yang ringan dan rendah lemak, cocok untuk diet sehat.",
         "calories": 230,
+        "serving": 3, 
         "ingredients": [
             "300g fillet ikan kakap",
             "1 batang serai, memarkan",
@@ -571,6 +589,7 @@
         "img": "../assets/images/recipes/mie-shirataki.jpg",
         "description": "Mie goreng yang rendah kalori menggunakan mie shirataki sebagai pengganti mie biasa.",
         "calories": 150,
+        "serving": 2,
         "ingredients": [
             "200g mie shirataki, rebus dan tiriskan",
             "1 butir telur",
@@ -601,6 +620,7 @@
         "img": "../assets/images/recipes/ikan-matah.jpg",
         "description": "Ikan bakar yang dibuat tanpa minyak dengan sambal matah segar sebagai pendamping.",
         "calories": 320,
+        "serving": 3, 
         "ingredients": [
             "500g ikan kembung, bersihkan",
             "2 batang serai, memarkan",

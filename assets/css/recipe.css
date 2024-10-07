@@ -158,6 +158,24 @@ body{
     margin: 20px 20px;
 }
 
+/* Tombol Lebih Banyak */
+.load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color: var(--green-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more:hover {
+    background-color: orange;
+}
+
 /* Search bar */
 .search-wrapper {
     display: flex;
