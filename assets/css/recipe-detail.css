@@ -152,11 +152,11 @@ body {
 .recipe-info h3 {
     font-size: 16px;
     margin: 10px 0;
-    transition: color 0.3s ease; /* Untuk transisi warna */
+    transition: color 0.3s ease; 
 }
 
 .recipe-card:hover .recipe-info h3 {
-    color: var(--green-color); /* Ubah warna menjadi hijau saat di-hover */
+    color: var(--green-color); 
 }
 
 .image-wrapper {
@@ -169,11 +169,11 @@ body {
     height: 250px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
-    transition: transform 0.3s ease; /* Tambahkan transisi untuk efek zoom */
+    transition: transform 0.3s ease;
 }
 
 .recipe-card img:hover {
-    transform: scale(1.1); /* Zoom in gambar saat di-hover */
+    transform: scale(1.1);
 }
 
 .favorite-btn {
