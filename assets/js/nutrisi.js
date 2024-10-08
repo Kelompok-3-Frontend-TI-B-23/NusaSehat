@@ -104,3 +104,37 @@ window.addEventListener('click', (event) => {
 });
 
 foodData.forEach(food => createFoodCard(food));
+
+const searchInput = document.getElementById('search-input');
+
+function displayAllFoodCards() {
+  const container = document.querySelector('.infoContainer');
+  container.innerHTML = '';
+  foodData.forEach(food => createFoodCard(food));
+}
+
+function filterFoodCards(searchTerm) {
+  const container = document.querySelector('.infoContainer');
+  container.innerHTML = '';
+
+  const filteredFood = foodData.filter(food => 
+    food.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  if (filteredFood.length > 0) {
+    filteredFood.forEach(food => createFoodCard(food));
+  } else {
+    container.innerHTML = '<p>Yah! Makanan yang kamu cari belum ada nih!</p>'; 
+  }
+}
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm) {
+      filterFoodCards(searchTerm);
+    } else {
+      displayAllFoodCards();
+    }
+  }
+});
