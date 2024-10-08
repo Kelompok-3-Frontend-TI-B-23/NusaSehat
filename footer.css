@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --lighter-green: #a7c957;
+    --light-green: #75b22c;
+    --beige: #f3e8cf;
+    --red: #bb4748;
+    --grey: #605757;
+}
+
+* {
+    padding: 0;
+    margin:0;
+    font-family: urbanist, sans-serif;
+}
+
+/* footer */
+footer {
+    background-color: var(--beige);
+}
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 4rem 1rem 4rem;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.bottom-menu li {
+    list-style: none;
+}
+.bottom-menu a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.contact {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ig-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.dc-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.tw-logo {
+    height:2.5rem;
+    width: auto;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 1rem;
+}

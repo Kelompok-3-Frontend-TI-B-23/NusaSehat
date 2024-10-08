@@ -1,10 +1,23 @@
-// ini supaya navbar tidak perlu dicopy copy
-const nav = document.querySelector('#nav-bar')
+// ini supaya navbar dan footer tidak perlu dicopy copy
+const nav = document.querySelector('#nav-bar');
+const footer = document.querySelector('#footer');
+
+// Load the navbar
 fetch('/navbar.html')
-.then(res=>res.text())
-.then(data=> {
-    nav.innerHTML=data
-})
+  .then(res => res.text())
+  .then(data => {
+    nav.innerHTML = data;
+  })
+  .catch(err => console.error('Failed to load navbar:', err));
+
+// Load the footer
+fetch('/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    footer.innerHTML = data;
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+
 
 // ini supaya slider nya ngeslide
 $(document).ready(function() {
@@ -27,16 +40,16 @@ $(document).ready(function() {
 });
 
 // ini supaya active active
-$(document).ready(function () {
-    const currentLocation = window.location.pathname; // Get current URL path
+// $(document).ready(function () {
+//     const currentLocation = window.location.pathname; // Get current URL path
     
-    // Loop through each link and check if href matches the current URL
-    $('.nav-links li a').each(function () {
-      if ($(this).attr('href') === currentLocation) {
-        $(this).addClass('active'); // Add the 'active' class to the matched link
-      }
-    });
-  });
+//     // Loop through each link and check if href matches the current URL
+//     $('.nav-links li a').each(function () {
+//       if ($(this).attr('href') === currentLocation) {
+//         $(this).addClass('active'); // Add the 'active' class to the matched link
+//       }
+//     });
+//   });
   
 // ini supaya ada tanda slidernya di mana
 $(document).ready(function() {
@@ -73,3 +86,38 @@ $(document).ready(function() {
     });
 });
 
+$.getJSON('../assets/data/recipes.json', function(recipes) {
+    // Acak resep sebelum ditampilkan
+    const shuffledRecipes = shuffleArray([...recipes]); // Untuk mengshuffle array untuk rekomendasi resep di recipe detail
+    
+    // Display 6 resep default pertama
+    displayRecipes(shuffledRecipes, true);
+
+    // Event listener untuk tombol "Lebih Banyak"
+    loadMoreBtn.on('click', function() {
+        displayRecipes(shuffledRecipes, false);
+    });
+})
+
+// $(document).ready(function() {
+//     // Get the current page path
+//     var currentPage = window.location.pathname;
+//     var header = document.getElementById("nav-links");
+//     var btns = header.getElementsByClassName('nav-btn');
+
+//     // Loop through each nav link and check if its href matches the current page
+//     // $('.nav-links a').each(function() {
+//     //   var href = $(this).attr('href');
+      
+//     //   // Check if the current page URL ends with the href of the link
+//     //   if (currentPage.endsWith(href)) {
+//     //     $(this).addClass('active');  // Add 'active' class to the matched link
+//     //   }
+
+//     for(var i = 0 ; i<btns.length ; i++){
+//         btns[i].addEventListener("click", function() {
+//             var current = document.getElementsByClassName("active");
+//             current[0].className = current[0].className.replace(" active", "");
+//             this.className += " active";
+//         });    };
+//   });

@@ -10,6 +10,7 @@
     --beige: #f3e8cf;
     --red: #bb4748;
     --grey: #605757;
+    --orange-color: #ff9a00;
 }
 
 
@@ -24,7 +25,7 @@
 /* Home */
 #home {
     padding: 2rem;
-    height: 80vh; 
+    height: 68vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,6 +155,19 @@
 #recipes {
     padding: 2rem;
     background-color: var(--red);
+}
+
+.title-recipes {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.text-recipes {
+    font-size: 2rem;
+    color: rgb(247, 137, 196);
+    text-align: center;
 }
 
 .slider-wrapper {
@@ -346,61 +360,3 @@
     padding: 0.5rem 1rem;
 }
 /* Footer */
-footer {
-    background-color: var(--beige);
-}
-#footer-container {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 4rem 1rem 4rem;
-    justify-content: space-around;
-    gap: 2rem;
-}
-
-.bottom-menu {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-}
-
-.bottom-menu li {
-    list-style: none;
-}
-.bottom-menu a {
-    text-decoration: none;
-    color: var(--red);
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-
-.contact {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-}
-
-.ig-logo {
-    height:2.5rem;
-    width: auto;
-}
-
-.dc-logo {
-    height:2.5rem;
-    width: auto;
-}
-
-.tw-logo {
-    height:2.5rem;
-    width: auto;
-}
-
-.copyright {
-    text-align: center;
-    padding-bottom: 1rem;
-}
