@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info Nutrisi</title>
@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="assets/css/nutrisi.css" />
   </head>
   <body>
-    <nav id="nav-bar">
-    </nav>
-    
+    <nav id="nav-bar"></nav>
+
     <div id="hero">
       <div class="hero-content">
         <h1>Temukan Informasi Nutrisi</h1>
@@ -23,6 +22,19 @@
     
     <div class="container">
       <div class="infoContainer"></div>
+    </div>
+
+    <div id="popup">
+      <div id="popup-content">
+        <div class="popup-image-wrapper">
+          <h2 id="popup-title"></h2>
+          <img id="popup-image" src="" alt="">
+        </div>
+        <div class="nutrition-facts">
+          <div id="popup-description"></div>
+        </div>
+        <button id="popup-close">&times;</button>
+      </div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

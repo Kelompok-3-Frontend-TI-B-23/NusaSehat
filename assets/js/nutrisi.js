@@ -1,65 +1,106 @@
-$(document).ready(function() {
-    const infos = [
-        { title: "Rendang", img: "../assets/images/rendang.jpg", desc: "Rendang is a slow-cooked dry curry from Indonesia, rich in flavor and made from beef." },
-        { title: "Sate Ayam", img: "../assets/images/sate.jpg", desc: "Sate Ayam is grilled chicken skewers served with peanut sauce, a popular street food in Indonesia." },
-        { title: "Nasi Goreng", img: "../assets/images/nasgor.jpg", desc: "Nasi Goreng is Indonesian-style fried rice, commonly served with a fried egg on top." },
-        { title: "Batagor", img: "../assets/images/bataghor.jpg", desc: "Batagor is a fried fish dumpling served with peanut sauce, originating from West Java, Indonesia." },
-        { title: "Ayam Geprek", img: "../assets/images/geprek.png", desc: "Ayam Geprek is a smashed fried chicken, served with spicy sambal, originating from Yogyakarta." }
-    ];
+const foodData = [
+  {
+    title: "Rendang",
+    img: "assets/images/rendang.jpg", 
+    desc: "Rendang is a slow-cooked dry curry from Indonesia, rich in flavor and made from beef.",
+    nutrition: {
+      calories: "500 G",
+      fat: "40 G",
+      saturatedFat: "20 G",
+      protein: "25 G",
+      cholesterol: "90 MG",
+      sodium: "900 MG",
+      warnings: [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Minyak berlebihan",
+        "Tinggi natrium"
+      ],
+    }
+  },
+  {
+    title: "Sate Ayam",
+    img: "assets/images/sate.jpg", 
+    desc: "Sate Ayam is grilled chicken skewers served with peanut sauce, a popular street food in Indonesia.",
+    nutrition: {
+      calories: "300 G",
+      fat: "15 G",
+      saturatedFat: "5 G",
+      protein: "30 G",
+      cholesterol: "80 MG",
+      sodium: "600 MG",
+      warnings: [
+      "TINGGI PROTEIN",
+      "MENGANDUNG KACANG",
+      "RENDAH KARBOHIDRAT",
+      "MENGANDUNG LEMAK JENUH"
+    ],
+  }
+},
+];
 
-    const infoContainer = $('.infoContainer');
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popup-image');
+const popupTitle = document.getElementById('popup-title');
+const popupDesc = document.getElementById('popup-description');
+const popupClose = document.getElementById('popup-close');
 
-    infos.forEach(info => {
-        const infoCard = `
-            <div class="info-card" data-title="${info.title}" data-img="${info.img}" data-desc="${info.desc}">
-                <div class="image-wrapper">
-                    <img src="${info.img}" alt="Info Image" />
-                </div>
-                <div class="info-info">
-                    <h3>${info.title}</h3>
-                </div>
-            </div>
-        `;
-        infoContainer.append(infoCard);
-    });
+function createFoodCard(food) {
+  const container = document.querySelector('.infoContainer');
 
-    $('#search-input').on('keypress', function(event) {
-        if (event.which === 13) {
-            const searchValue = $('#search-input').val().toLowerCase();
-            $('.info-card').each(function() {
-                const title = $(this).data('title').toLowerCase();
-                if (title.includes(searchValue)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            });
-        }
-    });
+  const card = document.createElement('div');
+  card.classList.add('info-card');
 
-    // Popup feature
-    const popup = $('<div id="popup"><div id="popup-content"><span id="popup-close">&times;</span><img id="popup-img" /><h3 id="popup-title"></h3><p id="popup-desc"></p></div></div>');
-    $('body').append(popup);
+  const imageWrapper = document.createElement('div');
+  imageWrapper.classList.add('image-wrapper');
+  const image = document.createElement('img');
+  image.src = food.img;
+  image.alt = food.title;
+  imageWrapper.appendChild(image);
+  card.appendChild(imageWrapper);
 
-    $('.info-card').on('click', function() {
-        const imgSrc = $(this).data('img');
-        const title = $(this).data('title');
-        const desc = $(this).data('desc');
+  const infoDiv = document.createElement('div');
+  infoDiv.classList.add('info-info');
+  const title = document.createElement('h3');
+  title.textContent = food.title;
+  infoDiv.appendChild(title);
+  card.appendChild(infoDiv);
 
-        $('#popup-img').attr('src', imgSrc);
-        $('#popup-title').text(title);
-        $('#popup-desc').text(desc);
+  card.addEventListener('click', () => {
+    popupImage.src = food.img;
+    popupTitle.textContent = food.title;
+    
+    let nutritionFactsHTML = `
+      <h2>*per porsi 100 Gram</h2>
+      <div class="fact"><span>KALORI</span><span>${food.nutrition.calories}</span></div>
+      <div class="fact"><span>LEMAK</span><span>${food.nutrition.fat}</span></div>
+      <div class="fact"><span>LEMAK JENUH</span><span>${food.nutrition.saturatedFat}</span></div>
+      <div class="fact"><span>PROTEIN</span><span>${food.nutrition.protein}</span></div>
+      <div class="fact"><span>KOLESTROL</span><span>${food.nutrition.cholesterol}</span></div>
+      <div class="fact"><span>NATRIUM</span><span>${food.nutrition.sodium}</span></div>
+    `;
 
-        $('#popup').fadeIn();
-    });
-
-    $('#popup-close').on('click', function() {
-        $('#popup').fadeOut();
-    });
-
-    $('#popup').on('click', function(e) {
-        if (e.target === this) {
-            $('#popup').fadeOut();
-        }
-    });
+    if (food.nutrition.warnings) {
+      nutritionFactsHTML += food.nutrition.warnings.map(warning => `
+        <div class="warning-box">${warning}</div>
+      `).join('');
+    }
+  
+    popupDesc.innerHTML = nutritionFactsHTML;
+    popup.style.display = 'flex';
 });
+
+  container.appendChild(card);
+}
+
+popupClose.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+
+foodData.forEach(food => createFoodCard(food));
