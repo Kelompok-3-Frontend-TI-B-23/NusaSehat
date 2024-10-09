@@ -26,7 +26,15 @@ $(document).ready(function() {
             );
             displayedRecipes = 0;
             displayRecipes(filteredRecipes, true);
+        
+            // Ilangin btn "Lebih Banyak" jika query dari search aktif
+            if (filteredRecipes.length <= recipesPerPage || value) {
+                loadMoreBtn.hide();
+            } else {
+                loadMoreBtn.show();
+            }
         });
+        
 
         // Event listener untuk routing ke halaman recipe detail
         recipeContainer.on('click', '.recipe-card', function() {
@@ -119,19 +127,27 @@ $(document).ready(function() {
             const durationFilter = $('#duration-filter').val();
             const difficultyFilter = $('#difficulty-filter').val();
             const caloriesFilter = $('#calories-filter').val();
-
+        
             let filteredRecipes = shuffledRecipes.filter(recipe => {
                 const matchesSearch = recipe.title.toLowerCase().includes(searchValue);
                 const matchesDuration = matchDuration(recipe.duration, durationFilter);
                 const matchesDifficulty = !difficultyFilter || recipe.difficulty.toLowerCase() === difficultyFilter.toLowerCase();
-                const matchesCalories = matchCalories(recipe.calories, caloriesFilter);
-
+                const matchesCalories = matchCalories(recipe.nutrition.calories, caloriesFilter);
+        
                 return matchesSearch && matchesDuration && matchesDifficulty && matchesCalories;
             });
-
+        
             displayedRecipes = 0;
             displayRecipes(filteredRecipes, true);
+        
+            // Ilangin "Lebih Banyak" btn kalo search/filter lagi aktif
+            if (filteredRecipes.length <= recipesPerPage || searchValue || durationFilter || difficultyFilter || caloriesFilter) {
+                loadMoreBtn.hide();
+            } else {
+                loadMoreBtn.show();
+            }
         }
+        
 
         // Fungsi filter durasi masak
         function matchDuration(duration, filter) {
