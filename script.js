@@ -22,7 +22,7 @@ fetch('/footer.html')
 // ini supaya slider nya ngeslide
 $(document).ready(function() {
     const $slider = $('.slider');
-    const $slides = $slider.find('img');
+    const $slides = $slider.find('.recipes-holder');
     let currentIndex = 0;
     const slideInterval = 3000; // Time in milliseconds (3 seconds)
 
