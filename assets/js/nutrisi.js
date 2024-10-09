@@ -20,12 +20,10 @@ function createFoodCard(food) {
   imageWrapper.appendChild(image);
   card.appendChild(imageWrapper);
 
-  // Bookmark icon
   const bookmarkIcon = document.createElement('i');
   bookmarkIcon.classList.add('fas', 'fa-bookmark', 'bookmark-icon');
   card.appendChild(bookmarkIcon);
 
-  // Check if already bookmarked
   if (bookmarkedFoods.includes(food)) {
     bookmarkIcon.classList.add('bookmarked');
   }
@@ -37,7 +35,6 @@ function createFoodCard(food) {
   infoDiv.appendChild(title);
   card.appendChild(infoDiv);
 
-  // Handle food card click for popup display
   card.addEventListener('click', () => {
     popupImage.src = food.img;
     popupTitle.textContent = food.title;
@@ -53,7 +50,7 @@ function createFoodCard(food) {
     `;
 
     if (food.nutrition.warnings) {
-      nutritionFactsHTML += food.nutrition.warnings.map(warning => 
+      nutritionFactsHTML += food.nutrition.warnings.map(warning =>
         `<div class="warning-box">${warning}</div>`
       ).join('');
     }
@@ -62,15 +59,14 @@ function createFoodCard(food) {
     popup.style.display = 'flex';
   });
 
-  // Handle bookmark click
   bookmarkIcon.addEventListener('click', (event) => {
-    event.stopPropagation();  // Prevent card click event from triggering
+    event.stopPropagation();
 
     if (bookmarkedFoods.includes(food)) {
-      bookmarkedFoods.splice(bookmarkedFoods.indexOf(food), 1);  // Remove from bookmark
+      bookmarkedFoods.splice(bookmarkedFoods.indexOf(food), 1);
       bookmarkIcon.classList.remove('bookmarked');
     } else {
-      bookmarkedFoods.push(food);  // Add to bookmark
+      bookmarkedFoods.push(food);
       bookmarkIcon.classList.add('bookmarked');
     }
   });
@@ -78,7 +74,6 @@ function createFoodCard(food) {
   container.appendChild(card);
 }
 
-// Handle popup close
 popupClose.addEventListener('click', () => {
   popup.style.display = 'none';
 });
@@ -89,7 +84,6 @@ window.addEventListener('click', (event) => {
   }
 });
 
-// Handle search
 const searchInput = document.getElementById('search-input');
 
 function displayAllFoodCards(foodData) {
@@ -102,7 +96,7 @@ function filterFoodCards(foodData, searchTerm) {
   const container = document.querySelector('.infoContainer');
   container.innerHTML = '';
 
-  const filteredFood = foodData.filter(food => 
+  const filteredFood = foodData.filter(food =>
     food.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -134,35 +128,30 @@ fetch('../assets/data/nutrisi.json')
     console.error('Error fetching data:', error);
   });
 
-// Handle bookmarked food popup
 const bookmarkPopup = document.getElementById('bookmark-popup');
 const bookmarkList = document.getElementById('bookmark-list');
 const bookmarkPopupClose = document.getElementById('bookmark-close');
 
 document.getElementById('show-bookmarks').addEventListener('click', () => {
-  bookmarkList.innerHTML = '';  // Hapus list sebelumnya
+  bookmarkList.innerHTML = '';
 
   if (bookmarkedFoods.length > 0) {
     bookmarkedFoods.forEach(food => {
       const listItem = document.createElement('div');
       listItem.classList.add('bookmark-item');
 
-      // Buat elemen gambar
       const foodImage = document.createElement('img');
       foodImage.src = food.img;
       foodImage.alt = food.title;
       foodImage.classList.add('bookmark-image');
 
-      // Buat elemen nama
       const foodTitle = document.createElement('p');
       foodTitle.textContent = food.title;
       foodTitle.classList.add('bookmark-title');
 
-      // Tambahkan gambar dan nama ke dalam listItem
       listItem.appendChild(foodImage);
       listItem.appendChild(foodTitle);
 
-      // Tambahkan listItem ke dalam bookmarkList
       bookmarkList.appendChild(listItem);
     });
   } else {
