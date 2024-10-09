@@ -1,44 +1,3 @@
-const foodData = [
-  {
-    title: "Rendang",
-    img: "assets/images/rendang.jpg", 
-    desc: "Rendang is a slow-cooked dry curry from Indonesia, rich in flavor and made from beef.",
-    nutrition: {
-      calories: "500 G",
-      fat: "40 G",
-      saturatedFat: "20 G",
-      protein: "25 G",
-      cholesterol: "90 MG",
-      sodium: "900 MG",
-      warnings: [
-        "Tinggi lemak jenuh",
-        "Tinggi kolesterol",
-        "Minyak berlebihan",
-        "Tinggi natrium"
-      ],
-    }
-  },
-  {
-    title: "Sate Ayam",
-    img: "assets/images/sate.jpg", 
-    desc: "Sate Ayam is grilled chicken skewers served with peanut sauce, a popular street food in Indonesia.",
-    nutrition: {
-      calories: "300 G",
-      fat: "15 G",
-      saturatedFat: "5 G",
-      protein: "30 G",
-      cholesterol: "80 MG",
-      sodium: "600 MG",
-      warnings: [
-      "TINGGI PROTEIN",
-      "MENGANDUNG KACANG",
-      "RENDAH KARBOHIDRAT",
-      "MENGANDUNG LEMAK JENUH"
-    ],
-  }
-},
-];
-
 const popup = document.getElementById('popup');
 const popupImage = document.getElementById('popup-image');
 const popupTitle = document.getElementById('popup-title');
@@ -88,7 +47,7 @@ function createFoodCard(food) {
   
     popupDesc.innerHTML = nutritionFactsHTML;
     popup.style.display = 'flex';
-});
+  });
 
   container.appendChild(card);
 }
@@ -103,17 +62,15 @@ window.addEventListener('click', (event) => {
   }
 });
 
-foodData.forEach(food => createFoodCard(food));
-
 const searchInput = document.getElementById('search-input');
 
-function displayAllFoodCards() {
+function displayAllFoodCards(foodData) {
   const container = document.querySelector('.infoContainer');
   container.innerHTML = '';
   foodData.forEach(food => createFoodCard(food));
 }
 
-function filterFoodCards(searchTerm) {
+function filterFoodCards(foodData, searchTerm) {
   const container = document.querySelector('.infoContainer');
   container.innerHTML = '';
 
@@ -132,9 +89,16 @@ searchInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {
-      filterFoodCards(searchTerm);
+      filterFoodCards(foodData, searchTerm);
     } else {
-      displayAllFoodCards();
+      displayAllFoodCards(foodData);
     }
   }
 });
+
+fetch('../assets/data/nutrisi.json')
+  .then(response => response.json())
+  .then(data => {
+    window.foodData = data;
+    displayAllFoodCards(foodData);
+})
