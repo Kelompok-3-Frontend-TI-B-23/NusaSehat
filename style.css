@@ -21,7 +21,9 @@
 }
 
 
-
+html {
+    scroll-behavior: smooth;
+}
 /* Home */
 #home {
     padding: 2rem;
@@ -157,11 +159,13 @@
     background-color: var(--red);
 }
 
+.title-recipes, .text-recipes {
+    padding-bottom: 1rem;
+}
 .title-recipes {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 1rem;
 }
 
 .text-recipes {
@@ -174,14 +178,16 @@
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
+    overflow: hidden;
 }
  
 .slider {
 	display: flex;
-	aspect-ratio: 16 / 9;
+	aspect-ratio: 15/ 9;
     /* ini supaya gambar yg overflow ke hide */
 	overflow-x: auto;
+    overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
@@ -190,42 +196,56 @@
 	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
-.slider-button {
-    position: absolute;
-    bottom: 3rem;
-    right: 4rem;
-    padding: 1rem 3rem;
-    background-color: var(--grey);
-    opacity: 0.3;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* Ensure the parent container has relative positioning */
+.recipes-holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  /* Existing button styling */
+  .slider-button {
+      position: absolute;
+      bottom: 3rem;
+      right: 4rem;
+      padding: 1rem 3rem;
+      background-color: var(--grey);
+      opacity: 0.6;
+      border: none;
+      cursor: pointer;
+      border-radius: 2rem;
+      transition: background-color 0.3s ease;
+  }
+
+  .slider-button a {
     font-size: 1rem;
-    border-radius: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-/* Button hover effect */
-.slider-button:hover {
-    background-color: var(--light-green);
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* ini milih class slider, trs targetin scrollbar supaya ilang */
-.slider::-webkit-scrollbar {
-	display: none;
-}
-
-/* flex-grow, flex-shrink, flex-basis */
-.slider img {
-	flex: 1 0 100%;
-    /* ini supaya scrollnya selalu mulai dari start (awal) */
-	scroll-snap-align: start;
-    /* supaya gambar uknya kea ccover, kalo kelebihan dipotong */
-	object-fit: cover;
-}
-
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Button hover effect */
+  .slider-button:hover {
+      background-color: var(--light-green);
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  
+  /* Hide scrollbar */
+  .slider::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Flex-grow, flex-shrink, flex-basis for images */
+  .recipes-holder img {
+      flex: 1 0 100%;
+      height: auto;
+      width: auto;
+      
+      scroll-snap-align: start;
+      object-fit: cover;
+  }
 .slider-nav {
 	display: flex;
     /* background-color: rgb(235, 233, 233); */

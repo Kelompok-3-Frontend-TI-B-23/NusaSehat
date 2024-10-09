@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
     <link rel="icon" href="/assets/images/icon-web.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -49,38 +49,56 @@
     </section>
 
     <section id="recipes">
+      <div class="title-recipes">Temukan Resep Makananmu</div>
+      <div class="text-recipes">Lebih sehat, lebih enak</div>
       <div class="slider-wrapper">
         <div class="slider">
-          <img
-            src="assets/images/Healthy-food.png"
-            alt="Image of recipe 1"
-            id="slide-1"
-          />
-          <img
-            src="assets/images/Rujak.jpg"
-            alt="Image of recipe 2"
-            id="slide-2"
-          />
-          <img
-            src="assets/images/Healthy-food.png"
-            alt="Image of recipe 3"
-            id="slide-3"
-          />
-          <img
-            src="assets/images/Healthy-food.png"
+          <div class="recipes-holder">
+            <img
+            src="assets/images/recipes/sup-ikan.jpg"
             alt="Image of recipe 4"
             id="slide-4"
-          />
+            />
+            <button class="slider-button" data-id="8"><a href="http://127.0.0.1:5501/recipe-detail.html?id=18">Lihat Resep</a></button>
+          </div>
+
+          <div class="recipes-holder">
+              <img
+              src="assets/images/recipes/sayur-lodeh.jpg"
+              alt="Image of recipe 1"
+              id="slide-1"
+            />
+              <button class="slider-button" data-id="8"><a href="http://127.0.0.1:5501/recipe-detail.html?id=12">Lihat Resep</a></button>
+          </div>
+
+          <div class="recipes-holder">
+              <img
+              src="assets/images/recipes/bubur-ayam.jpg"
+              alt="Image of recipe 2"
+              id="slide-2"
+              />
+              <button class="slider-button" data-id="8"><a href="http://127.0.0.1:5501/recipe-detail.html?id=15">Lihat Resep</a></button>
+          </div>
+
+          <div class="recipes-holder">
+            <img
+            src="assets/images/recipes/karedok.jpg"
+            alt="Image of recipe 3"
+            id="slide-3"
+            />
+            <button class="slider-button" data-id="8"><a href="http://127.0.0.1:5501/recipe-detail.html?id=16">Lihat Resep</a></button>
+          </div>
+          
         </div>
-        <div class="slider-nav">
+        <div class="slider-nav" >
           <a href="#slide-1"></a>
-          <button class="slider-button">Lihat Resep</button>
+         
           <a href="#slide-2"></a>
-          <button class="slider-button">Lihat Resep</button>
+          
           <a href="#slide-3"></a>
-          <button class="slider-button">Lihat Resep</button>
+          
           <a href="#slide-4"></a>
-          <button class="slider-button">Lihat Resep</button>
+         
         </div>
       </div>
     </section>

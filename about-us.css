@@ -1,0 +1,109 @@
+.nusa-sehat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/images/pecel-sayur-jawa.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.nusa-sehat-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+}
+
+.nusa-sehat-text {
+    padding: 10rem;
+    position: relative;
+    z-index: 2; 
+    color: var(--beige);
+    font-size: 1.5rem;
+}
+
+/* team section */
+#team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width:100%;
+    background-color: var(--red);
+    flex-wrap: wrap;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.team-card{
+    width: 20rem;
+    height: 25rem;
+    padding: 3.6rem 2rem;
+    margin: 1rem;
+    background-color: var(--beige);
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1); ;
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.personel-box {
+    text-align: center;
+}
+
+.social-media{
+    margin-left: 0.5rem;
+}
+
+/* .social-media {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0.5em;
+    letter-spacing: -0.5rem;
+} */
+
+.fa-fw {
+    
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+
