@@ -113,12 +113,13 @@
     border-radius: 25px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s ease; 
+    transition: border-color 0.3s ease;
 }
 
 .hero-search input:focus {
     border-color: var(--light-green);
 }
+
 .container {
     background-color: var(--beige);
     min-height: 100vh;
@@ -163,6 +164,26 @@
     border-bottom: 1px solid #ddd;
 }
 
+.bookmark-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .bookmark-icon.bookmarked {
+    color: gold;
+  }
+  
+  .bookmark-icon:hover {
+    color: rgb(158, 116, 10);
+  }
+
 .info-info {
     display: flex;
     padding: 15px;
@@ -174,17 +195,50 @@ h3 {
     margin: auto;
 }
 
-#popup {
+#popup, #bookmark-popup {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    top: 0;
+    z-index: 1000;
     left: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#popup-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+}
+
+#bookmark-popup-content {
+     background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 650px;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+    text-align: center;
 }
 
 .popup-image-wrapper {
@@ -210,21 +264,6 @@ h3 {
     width: 100%;
     margin-bottom: 20px;
     color: white;
-}
-
-#popup-content {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1200px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    position: relative; 
 }
 
 .nutrition-facts {
@@ -266,15 +305,7 @@ h3 {
     justify-content: center;
 }
 
-.fact .label, .warning-box .label {
-    flex: 1;
-}
-
-.fact .value, .warning-box .value {
-    flex: 0; 
-}
-
-#popup-close {
+#popup-close, #bookmark-close {
     position: absolute;
     top: 0px;
     right: 20px;
@@ -285,6 +316,61 @@ h3 {
     border: none;
 }
 
-#popup-close:hover {
+#popup-close:hover, #bookmark-close:hover {
     color: var(--red);
+}
+
+#show-bookmarks {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+#show-bookmarks i {
+    margin: 0;
+}
+
+#show-bookmarks:hover {
+    background-color: darkred;
+}
+
+.bookmark-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+}
+
+.bookmark-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.bookmark-title {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#bookmark-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
 }
