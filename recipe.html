@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/images/icon-web.png" type="image/x-icon" />
     <title>Recipe</title>
+
+    <!-- Link ke css -->
     <link rel="stylesheet" href="assets/css/recipe.css" />
 
     <!-- Buat pake icon -->
@@ -14,6 +16,7 @@
     />
   </head>
   <body>
+    <!-- Navbar -->
     <nav id="nav-bar"></nav>
 
     <!-- Hero Section -->
@@ -23,15 +26,19 @@
         <p class="fade-in-up">
           Cari Alternatif Resep Sehat Makanan Indonesia Favorit Anda Disini
         </p>
+
+        <!-- Search Bar -->
         <div class="search-wrapper fade-in-up">
           <input type="search" id="search" placeholder="Cari Resep" />
         </div>
       </div>
     </section>
 
+    <!-- Filter -->
     <h2 class="recipe-title tracking-in-expand">Filter</h2>
 
     <section class="filter-wrapper">
+      <!-- Filter durasi -->
       <select id="duration-filter">
         <option value="">Filter Durasi</option>
         <option value="singkat">Singkat (0-30 menit)</option>
@@ -39,6 +46,7 @@
         <option value="lama">Lama (61+ menit)</option>
       </select>
 
+      <!-- Filter tingkat kesulitan -->
       <select id="difficulty-filter">
         <option value="">Filter Kesulitan</option>
         <option value="mudah">Mudah</option>
@@ -46,6 +54,7 @@
         <option value="sulit">Sulit</option>
       </select>
 
+      <!-- Filter kategori -->
       <select id="calories-filter">
         <option value="">Filter Kalori</option>
         <option value="rendah">Rendah (0-300 kcal)</option>
@@ -54,6 +63,7 @@
       </select>
     </section>
 
+    <!-- Text kalau ga ada recipe -->
     <div class="no-recipe"><p></p></div>
 
     <!-- Recipe Catalog -->
@@ -62,6 +72,7 @@
       <button class="load-more">Lebih Banyak</button>
     </section>
 
+    <!-- Footer -->
     <footer id="footer"></footer>
 
     <!-- JQuery -->
