@@ -35,10 +35,17 @@ footer {
     list-style: none;
 }
 .bottom-menu a {
+    display: inline-block;
     text-decoration: none;
     color: var(--red);
     font-weight: 500;
     font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.bottom-menu a:hover {
+    transform: scale(1.2);
+    transform-origin: center;
 }
 
 .contact {
@@ -71,4 +78,37 @@ footer {
 .copyright {
     text-align: center;
     padding-bottom: 1rem;
+}
+
+/* media screen */
+@media only screen and (max-width: 480px) {
+    .bottom-menu{
+        gap:1.3rem;
+    }
+    .bottom-menu a{
+        font-size: 0.7rem;
+    }
+
+    .contact{
+        font-size: 1rem;
+    }
+
+    .ig-logo {
+        height:1.5rem;
+        width: auto;
+    }
+    
+    .dc-logo {
+        height:1.5rem;
+        width: auto;
+    }
+    
+    .tw-logo {
+        height:1.5rem;
+        width: auto;
+    }
+
+    .copyright{
+        font-size: 0.6rem;
+    }
 }

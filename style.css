@@ -27,7 +27,7 @@ html {
 /* Home */
 #home {
     padding: 2rem;
-    height: 68vh; 
+    /* height: 68vh;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +36,7 @@ html {
 
 .home-container {
     display: flex; 
+    flex-wrap: wrap;
     justify-content: space-between; 
     align-items: center; 
     width: 100%;
@@ -89,10 +90,13 @@ html {
 
 .home-image-container {
     flex: 1; 
+    justify-content: center;
+    align-items: center;
     /* text-align: right; */
 }
 
 .home-image {
+    justify-self: center;
     max-width: 25rem; 
     height: auto;
     border-radius: 15rem;
@@ -137,6 +141,7 @@ html {
 }
 
 .about-text {
+    text-align: justify;
     font-size: 1.4rem;
     animation : moveUp 1s ease forwards;
 }
@@ -176,9 +181,10 @@ html {
 
 .slider-wrapper {
     position: relative;
+    /* width supaya responsive */
+    width: 100%; 
     max-width: 48rem;
     margin: 0 auto;
-    /* padding: 2rem; */
     overflow: hidden;
 }
  
@@ -202,7 +208,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 1rem;
+    flex: 0 0 100%;
   }
   
   /* Existing button styling */
@@ -212,7 +219,7 @@ html {
       right: 4rem;
       padding: 1rem 3rem;
       background-color: var(--grey);
-      opacity: 0.6;
+      opacity: 0.8;
       border: none;
       cursor: pointer;
       border-radius: 2rem;
@@ -239,9 +246,9 @@ html {
   
   /* Flex-grow, flex-shrink, flex-basis for images */
   .recipes-holder img {
-      flex: 1 0 100%;
+      /* flex: 1 0 100%; */
       height: auto;
-      width: auto;
+      width: 100%;
       
       scroll-snap-align: start;
       object-fit: cover;
@@ -257,8 +264,6 @@ html {
 	transform: translateX(-50%);
 	z-index: 1;
 }
-
-
 
 .slider-nav a {
 	width: 1rem;
@@ -325,8 +330,8 @@ html {
 
 .overlay h3 {
     font-weight: 500;
-    margin-bottom: 0.4rem;
-    margin-top: 35%; 
+    margin-bottom: 0.2rem;
+    margin-top: 0%; 
     font-size: 2rem;
     letter-spacing: 0.5rem;
 }
@@ -349,6 +354,8 @@ html {
     font-size: 1rem;
     transition: height 0.5s ease-in-out; 
     color: white;
+    padding: 3rem;
+    gap:0;
 }
 
 .overlay a {
@@ -360,6 +367,7 @@ html {
     border-radius: 3rem;
     text-align: center;
     padding: 0.3rem 1rem;
+    margin-bottom: 1rem;
 }
 
 .overlay a:hover{
@@ -374,9 +382,118 @@ html {
     height: 100%;
 }
 
-.nutrisi-button {
-    margin: 0.5rem;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
+/* media screen */
+@media only screen and (max-width: 1660px) {
+    .overlay {
+        font-size: 0.8rem;
+    }
+
+    .overlay h3 {
+        margin-top: 63%; 
+        font-size: 1.5rem;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        padding: 5rem;
+    }    
+
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-description {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .home-image {
+        width: 20rem; 
+    }
+
+    
+    
 }
-/* Footer */
+
+/* @media only screen and (max-width: 1400px) {
+    .overlay h3 {
+        margin-top: 43%; 
+        font-size: 1.3rem;
+    }
+
+} */
+@media only screen and (max-width: 1200px) and (min-width: 850px){
+    .overlay {
+        font-size: 0.4rem;
+    }
+
+    .overlay h3 {
+        margin-top: 60%; 
+        font-size: 0.8rem;
+    }
+
+    .overlay a {
+        margin-top: 0.3rem;
+        font-size: 0.5rem;
+    }
+
+    
+}
+
+@media only screen and (max-width: 760px) and (min-width: 300px) {
+    .home-container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .home-image {
+        width: 15rem; 
+    }
+
+    .slider-button {
+        bottom: 2rem;
+        right: 3rem;
+        padding: 0.5rem 1rem;
+        opacity: 0.6;
+        border: none;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: background-color 0.3s ease;
+    }
+  
+    .slider-button a {
+      font-size: 0.8rem;
+    }
+
+    .overlay {
+        font-size: 0.4rem;
+        line-height: 0.4rem;
+    }
+
+    .overlay h3 {
+        margin-top: 63%; 
+        font-size: 0.5rem;
+    }
+
+    .overlay a {
+        font-size: 0.3rem;
+        margin-top: 0.3rem;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .title-nutrisi, .title-recipes {
+        font-size: 2rem;
+    }
+
+    .text-nutrisi, .text-recipes {
+        font-size: 1rem;
+    }
+}
+
