@@ -6,6 +6,9 @@ const popupClose = document.getElementById('popup-close');
 
 const bookmarkedFoods = [];
 
+let currentPage = 1;
+const itemsPerPage = 10;
+
 function createFoodCard(food) {
   const container = document.querySelector('.infoContainer');
 
@@ -80,9 +83,9 @@ function createFoodCard(food) {
             observer.unobserve(card);
         }
     });
-});
+  });
 
-observer.observe(card);
+  observer.observe(card);
 }
 
 popupClose.addEventListener('click', () => {
@@ -97,10 +100,30 @@ window.addEventListener('click', (event) => {
 
 const searchInput = document.getElementById('search-input');
 
+function displayFoodCardsByPage(foodData) {
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const slicedData = foodData.slice(start, end);
+
+  if (end >= foodData.length) {
+    document.getElementById('load-more').style.display = 'none';
+  } else {
+    document.getElementById('load-more').style.display = 'block';
+  }
+
+  slicedData.forEach(food => createFoodCard(food));
+}
+
+document.getElementById('load-more').addEventListener('click', () => {
+  currentPage++;
+  displayFoodCardsByPage(foodData);
+});
+
 function displayAllFoodCards(foodData) {
+  currentPage = 1;
   const container = document.querySelector('.infoContainer');
   container.innerHTML = '';
-  foodData.forEach(food => createFoodCard(food));
+  displayFoodCardsByPage(foodData);
 }
 
 function filterFoodCards(foodData, searchTerm) {
@@ -112,9 +135,10 @@ function filterFoodCards(foodData, searchTerm) {
   );
 
   if (filteredFood.length > 0) {
-    filteredFood.forEach(food => createFoodCard(food));
+    displayFoodCardsByPage(filteredFood);
   } else {
     container.innerHTML = '<p>Yah! Makanan yang kamu cari belum ada nih!</p>';
+    document.getElementById('load-more').style.display = 'none';
   }
 }
 
