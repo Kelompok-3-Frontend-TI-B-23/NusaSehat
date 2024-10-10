@@ -41,17 +41,17 @@ function createFoodCard(food) {
 
     let nutritionFactsHTML = `
       <h2>*per porsi 100 Gram</h2>
-      <div class="fact"><span>KALORI</span><span>${food.nutrition.calories}</span></div>
-      <div class="fact"><span>LEMAK</span><span>${food.nutrition.fat}</span></div>
-      <div class="fact"><span>LEMAK JENUH</span><span>${food.nutrition.saturatedFat}</span></div>
-      <div class="fact"><span>PROTEIN</span><span>${food.nutrition.protein}</span></div>
-      <div class="fact"><span>KOLESTROL</span><span>${food.nutrition.cholesterol}</span></div>
-      <div class="fact"><span>NATRIUM</span><span>${food.nutrition.sodium}</span></div>
+      <div class="fact"><span class="scale-in-center">KALORI</span><span class="scale-in-center">${food.nutrition.calories}</span></div>
+      <div class="fact"><span class="scale-in-center">LEMAK</span><span class="scale-in-center">${food.nutrition.fat}</span></div>
+      <div class="fact"><span class="scale-in-center">LEMAK JENUH</span><span class="scale-in-center">${food.nutrition.saturatedFat}</span></div>
+      <div class="fact"><span class="scale-in-center">PROTEIN</span><span class="scale-in-center">${food.nutrition.protein}</span></div>
+      <div class="fact"><span class="scale-in-center">KOLESTROL</span><span class="scale-in-center">${food.nutrition.cholesterol}</span></div>
+      <div class="fact"><span class="scale-in-center">NATRIUM</span><span class="scale-in-center">${food.nutrition.sodium}</span></div>
     `;
 
     if (food.nutrition.warnings) {
       nutritionFactsHTML += food.nutrition.warnings.map(warning =>
-        `<div class="warning-box">${warning}</div>`
+        `<div class="warning-box"><span class="scale-in-center">${warning}</span></div>`
       ).join('');
     }
 
@@ -72,6 +72,17 @@ function createFoodCard(food) {
   });
 
   container.appendChild(card);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            card.classList.add('show');
+            observer.unobserve(card);
+        }
+    });
+});
+
+observer.observe(card);
 }
 
 popupClose.addEventListener('click', () => {
