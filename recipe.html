@@ -19,46 +19,39 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
-        <h2>Selamat Datang di Koleksi Resep!</h2>
-        <p>Cari Alternatif Resep Sehat Makanan Indonesia Favorit Anda Disini</p>
-        <div class="search-wrapper">
+        <h2 class="fade-in-up">Selamat Datang di Koleksi Resep!</h2>
+        <p class="fade-in-up">
+          Cari Alternatif Resep Sehat Makanan Indonesia Favorit Anda Disini
+        </p>
+        <div class="search-wrapper fade-in-up">
           <input type="search" id="search" placeholder="Cari Resep" />
         </div>
       </div>
     </section>
 
-    <h2 class="recipe-title">Filter</h2>
+    <h2 class="recipe-title tracking-in-expand">Filter</h2>
 
     <section class="filter-wrapper">
       <select id="duration-filter">
         <option value="">Filter Durasi</option>
-        <option value="short">Short (0-30 menit)</option>
-        <option value="medium">Medium (31-60 menit)</option>
-        <option value="long">Long (61+ menit)</option>
+        <option value="singkat">Singkat (0-30 menit)</option>
+        <option value="sedang">Sedang (31-60 menit)</option>
+        <option value="lama">Lama (61+ menit)</option>
       </select>
 
       <select id="difficulty-filter">
         <option value="">Filter Kesulitan</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
+        <option value="mudah">Mudah</option>
+        <option value="sedang">Sedang</option>
+        <option value="sulit">Sulit</option>
       </select>
 
       <select id="calories-filter">
         <option value="">Filter Kalori</option>
-        <option value="low">Low (0-300 kcal)</option>
-        <option value="medium">Medium (301-600 kcal)</option>
-        <option value="high">High (601+ kcal)</option>
+        <option value="rendah">Rendah (0-300 kcal)</option>
+        <option value="sedang">Sedang (301-600 kcal)</option>
+        <option value="tinggi">Tinggi (601+ kcal)</option>
       </select>
-
-      <!-- <button id="sort-duration">
-        Sort by Duration <i class="fa-solid fa-arrow-up"></i
-        ><i class="fa-solid fa-arrow-down"></i>
-      </button>
-      <button id="sort-calories">
-        Sort by Calories <i class="fa-solid fa-arrow-up"></i
-        ><i class="fa-solid fa-arrow-down"></i>
-      </button> -->
     </section>
 
     <div class="no-recipe"><p></p></div>
