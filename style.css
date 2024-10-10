@@ -263,6 +263,7 @@ html {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
+    bottom: 2rem;;
 }
 
 .slider-nav a {
@@ -495,5 +496,15 @@ html {
     .text-nutrisi, .text-recipes {
         font-size: 1rem;
     }
+
+    .slider-nav{
+        bottom:1rem
+    }
+
+    .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
 }
 
