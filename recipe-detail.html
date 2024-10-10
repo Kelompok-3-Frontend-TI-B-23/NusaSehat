@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/images/icon-web.png" type="image/x-icon" />
     <title>Recipe Detail</title>
-    <link rel="stylesheet" href="assets/css/recipe-detail.css" />
+    <link rel="stylesheet" href="assets/css/recipe.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,42 +13,41 @@
   </head>
   <body>
     <nav id="nav-bar"></nav>
-    <div class="recipe-detail-container">
-      <h2 class="recipe-detail-title"></h2>
-      <div class="details">
+    <div class="recipe-detail-container fade-in-up">
+      <h2 class="recipe-detail-title fade-in-up-1"></h2>
+      <div class="details fade-in-up-2">
         <span id="recipe-duration"><i class="fa fa-clock-o"></i></span>
         <span id="recipe-difficulty"><i class="fa fa-tasks"></i></span>
-        <span id="recipe-calories"><i class="fa fa-fire"></i> </span>
-        <span id="recipe-serving"><i class="fa fa-user"></i> </span>
+        <span id="recipe-calories"><i class="fa fa-fire"></i></span>
+        <span id="recipe-serving"><i class="fa fa-user"></i></span>
       </div>
 
       <img
-        class="recipe-image"
+        class="recipe-image fade-in-up-3"
         src="../assets/images/recipes/lupakyu2.png"
         alt="Recipe Image"
       />
 
       <!-- Detail -->
-
-      <p id="recipe-description"></p>
+      <p id="recipe-description" class="fade-in-up-4"></p>
 
       <!-- Ingredients -->
-      <h3>Bahan-bahan</h3>
-      <ul id="recipe-ingredients"></ul>
+      <h3 class="recipe-detail- fade-in-up-1">Bahan-bahan</h3>
+      <ul id="recipe-ingredients" class="fade-in-up-2"></ul>
 
       <!-- Steps -->
-      <h3>Langkah-langkah</h3>
-      <ol id="recipe-steps"></ol>
+      <h3 class="fade-in-up-3">Langkah-langkah</h3>
+      <ol id="recipe-steps" class="fade-in-up-4"></ol>
 
       <!-- Nutrition -->
-      <h3>Info Nutrisi</h3>
-      <table id="nutrition-table">
+      <h3 class="fade-in-up-1">Info Nutrisi</h3>
+      <table id="nutrition-table" class="fade-in-up-2">
         <tr>
-          <th>Calories</th>
+          <th>Kalori</th>
           <td id="calories"></td>
         </tr>
         <tr>
-          <th>Carbs</th>
+          <th>Karbohidrat</th>
           <td id="carbs"></td>
         </tr>
         <tr>
@@ -56,19 +55,26 @@
           <td id="protein"></td>
         </tr>
         <tr>
-          <th>Fat</th>
+          <th>Lemak</th>
           <td id="fat"></td>
         </tr>
       </table>
 
-      <div class="recommended">
-        <h3 class="recommended-title">Rekomendasi Resep Lainnya</h3>
-        <div class="container" id="recommendedRecipes"></div>
+      <!-- Recommended Recipe (random) -->
+      <div class="recommended fade-in-up-3">
+        <h3 class="recommended-title fade-in-up-1">
+          Rekomendasi Resep Lainnya
+        </h3>
+        <div
+          class="container"
+          id="recommendedRecipes"
+          class="fade-in-up-4"
+        ></div>
       </div>
 
       <!-- Back to recipe -->
       <a href="recipe.html">
-        <button id="back-button">Back to Recipes</button>
+        <button id="back-button" class="fade-in-up-2">Kembali ke Resep</button>
       </a>
     </div>
 

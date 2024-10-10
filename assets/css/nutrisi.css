@@ -217,7 +217,6 @@ span.scale-in-center {
 
 .info-card {
     opacity: 0;
-    transform: translateX(-100px);
     transition: opacity 0.1s ease, transform 0.1s ease;
     width: 400px;
     border: 1px solid #ddd;
@@ -232,15 +231,31 @@ span.scale-in-center {
 
 .info-card.show {
     opacity: 1;
-    transform: translateX(0);
-    animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;}
+    animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
 
-@keyframes slide-right {
+ @-webkit-keyframes slide-in-bottom {
     0% {
-      transform: translateX(100px);
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
     }
     100% {
-      transform: translateX(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
     }
   }
 
