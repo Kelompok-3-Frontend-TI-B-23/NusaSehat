@@ -26,11 +26,31 @@
 
     <div class="container">
       <button id="show-bookmarks">
-         <i class="fas fa-bookmark"></i>
+          <i class="fas fa-bookmark"></i>
       </button>
+      <div class="filter-container">
+          <h3>Filter Berdasarkan</h3>
+          <label for="calories">Kalori (per 100 gram):</label>
+          <select id="calories">
+              <option value="">Semua</option>
+              <option value="low">Rendah (< 200 Kcal)</option>
+              <option value="medium">Sedang (200-300 Kcal)</option>
+              <option value="high">Tinggi (> 300 Kcal)</option>
+          </select>
+  
+          <label for="ingredient">Bahan Baku:</label>
+          <select id="ingredient">
+              <option value="">Semua</option>
+              <option value="sapi">Daging Sapi</option>
+              <option value="ayam">Daging Ayam</option>
+              <option value="santan">Santan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="tepung">Tepung</option>
+          </select>
+      </div>
       <div class="infoContainer"></div>
       <button id="load-more">Lebih Banyak</button>
-   </div>
+  </div>
 
     <div id="popup">
       <div id="popup-content">

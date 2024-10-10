@@ -191,7 +191,7 @@
   {
     "title": "Ketoprak",
     "img": "assets/images/nutrisi/ketoprak.jpg",
-    "ingredients": ["Tahu", "Bihun", "Lontong", "Kacang Tanah", "Saus Kacang", "Bawang Merah", "Kecap Manis"],
+    "ingredients": ["Tahu", "Bihun", "Vegetarian", "Lontong", "Kacang Tanah", "Saus Kacang", "Bawang Merah", "Kecap Manis"],
     "nutrition": {
       "calories": "250 Kcal",
       "fat": "15 G",
@@ -228,7 +228,7 @@
   {
     "title": "Tempe Mendoan",
     "img": "assets/images/nutrisi/tempemendoan.jpg",
-    "ingredients": ["Tempe", "Tepung Terigu", "Bawang Putih", "Air", "Minyak Goreng"],
+    "ingredients": ["Tempe", "Vegetarian", "Tepung Terigu", "Bawang Putih", "Air", "Minyak Goreng"],
     "nutrition": {
       "calories": "220 Kcal",
       "fat": "14 G",
@@ -266,7 +266,7 @@
   {
     "title": "Kerak Telor",
     "img": "assets/images/nutrisi/keraktelor.jpg",
-    "ingredients": ["Beras Ketan", "Telur", "Serundeng"],
+    "ingredients": ["Beras Ketan", "Telur", "Serundeng", "Vegetarian"],
     "nutrition": {
       "calories": "270 Kcal",
       "fat": "15 G",
@@ -342,7 +342,7 @@
   {
     "title": "Sambal Goreng Kentang",
     "img": "assets/images/nutrisi/sambalkentang.jpg",
-    "ingredients": ["Kentang", "Cabai", "Bumbu"],
+    "ingredients": ["Kentang", "Cabai", "Bumbu", "Vegetarian"],
     "nutrition": {
       "calories": "220 Kcal",
       "fat": "12 G",
@@ -399,7 +399,7 @@
   {
     "title": "Roti Bakar Cokelat",
     "img": "assets/images/nutrisi/rotibakar.jpg",
-    "ingredients": ["Roti", "Cokelat", "Mentega"],
+    "ingredients": ["Roti", "Cokelat", "Mentega", "Tepung"],
     "nutrition": {
       "calories": "350 Kcal",
       "fat": "20 G",
@@ -450,7 +450,7 @@
   {
     "title": "Pisang Ijo",
     "img": "assets/images/nutrisi/pisangijo.jpg",
-    "ingredients": ["Pisang", "Tepung Terigu", "Pewarna Hijau", "Santan", "Gula"],
+    "ingredients": ["Pisang", "Tepung", "Pewarna Hijau", "Santan", "Gula"],
     "nutrition": {
       "calories": "300 Kcal",
       "fat": "12 G",
