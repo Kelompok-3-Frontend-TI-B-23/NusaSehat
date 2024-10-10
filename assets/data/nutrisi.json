@@ -1,39 +1,466 @@
 [
   {
     "title": "Rendang",
-    "img": "assets/images/rendang.jpg",
-    "desc": "Rendang is a slow-cooked dry curry from Indonesia, rich in flavor and made from beef.",
+    "img": "assets/images/nutrisi/rendang.jpg",
+    "ingredients": ["Daging Sapi", "Santan", "Cabai", "Rempah-rempah"],
     "nutrition": {
-      "calories": "500 G",
-      "fat": "40 G",
-      "saturatedFat": "20 G",
-      "protein": "25 G",
-      "cholesterol": "90 MG",
-      "sodium": "900 MG",
+      "calories": "193 Kcal",
+      "fat": "14 G",
+      "saturatedFat": "7 G",
+      "protein": "10 G",
+      "cholesterol": "37 MG",
+      "sodium": "400 MG",
       "warnings": [
         "Tinggi lemak jenuh",
         "Tinggi kolesterol",
-        "Minyak berlebihan",
-        "Tinggi natrium"
+        "Tinggi natrium",
+        "Dapat meningkatkan risiko penyakit jantung"
       ]
     }
   },
   {
     "title": "Sate Ayam",
-    "img": "assets/images/sate.jpg",
-    "desc": "Sate Ayam is grilled chicken skewers served with peanut sauce, a popular street food in Indonesia.",
+    "img": "assets/images/nutrisi/sate.jpg",
+    "ingredients": ["Daging Ayam", "Kacang", "Kecap", "Bawang Putih"],
     "nutrition": {
-      "calories": "300 G",
+      "calories": "165 Kcal",
+      "fat": "7 G",
+      "saturatedFat": "2 G",
+      "protein": "20 G",
+      "cholesterol": "40 MG",
+      "sodium": "250 MG",
+      "warnings": [
+        "Mengandung kacang (alergen)",
+        "Tinggi kolesterol",
+        "Tinggi natrium",
+        "Dapat memicu hipertensi"
+      ]
+    }
+  },
+  {
+    "title": "Nasi Goreng",
+    "img": "assets/images/nutrisi/nasgor.jpg",
+    "ingredients": ["Nasi", "Kecap", "Telur", "Bawang"],
+    "nutrition": {
+      "calories": "210 Kcal",
+      "fat": "7 G",
+      "saturatedFat": "2 G",
+      "protein": "6 G",
+      "cholesterol": "60 MG",
+      "sodium": "300 MG",
+      "warnings": [
+        "Tinggi kalori",
+        "Tinggi natrium",
+        "Tinggi lemak jenuh",
+        "Kurang serat"
+      ]
+    }
+  },
+  {
+    "title": "Soto Ayam",
+    "img": "assets/images/nutrisi/sotoayam.jpg",
+    "ingredients": ["Daging Ayam", "Soun", "Kunyit", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "120 Kcal",
+      "fat": "4 G",
+      "saturatedFat": "1 G",
+      "protein": "12 G",
+      "cholesterol": "35 MG",
+      "sodium": "300 MG",
+      "warnings": [
+        "Tinggi natrium",
+        "Tinggi kolesterol",
+        "Dapat menyebabkan hipertensi"
+      ]
+    }
+  },
+  {
+    "title": "Gulai Kambing",
+    "img": "assets/images/nutrisi/gulaikambing.jpg",
+    "ingredients": ["Daging Kambing", "Santan", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "230 Kcal",
+      "fat": "18 G",
+      "saturatedFat": "9 G",
+      "protein": "15 G",
+      "cholesterol": "90 MG",
+      "sodium": "200 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat menyebabkan risiko penyakit jantung",
+        "Dapat memicu peningkatan tekanan darah"
+      ]
+    }
+  },
+  {
+    "title": "Nasi Padang",
+    "img": "assets/images/nutrisi/nasipadang.jpg",
+    "ingredients": ["Nasi", "Daging Sapi", "Santan", "Sayuran"],
+    "nutrition": {
+      "calories": "300 Kcal",
+      "fat": "12 G",
+      "saturatedFat": "6 G",
+      "protein": "10 G",
+      "cholesterol": "70 MG",
+      "sodium": "500 MG",
+      "warnings": [
+        "Tinggi kalori",
+        "Tinggi lemak jenuh",
+        "Tinggi natrium",
+        "Kurang sayuran berserat tinggi"
+      ]
+    }
+  },
+  {
+    "title": "Ikan Bakar",
+    "img": "assets/images/nutrisi/ikanbakar.jpg",
+    "ingredients": ["Ikan Laut", "Kecap", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "180 Kcal",
+      "fat": "8 G",
+      "saturatedFat": "2 G",
+      "protein": "22 G",
+      "cholesterol": "60 MG",
+      "sodium": "400 MG",
+      "warnings": [
+        "Tinggi natrium",
+        "Mengandung kolesterol",
+        "Mungkin mengandung zat berbahaya dari pembakaran",
+        "Dapat meningkatkan risiko kanker pada konsumsi berlebih"
+      ]
+    }
+  },
+  {
+    "title": "Ayam Betutu",
+    "img": "assets/images/nutrisi/ayambetutu.jpg",
+    "ingredients": ["Daging Ayam", "Santan", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "210 Kcal",
+      "fat": "11 G",
+      "saturatedFat": "5 G",
+      "protein": "18 G",
+      "cholesterol": "75 MG",
+      "sodium": "250 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Mengandung santan",
+        "Dapat menyebabkan gangguan pencernaan"
+      ]
+    }
+  },
+  {
+    "title": "Rawon",
+    "img": "assets/images/nutrisi/rawon.jpg",
+    "ingredients": ["Daging Sapi", "Keluwak", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "180 Kcal",
+      "fat": "9 G",
+      "saturatedFat": "3 G",
+      "protein": "14 G",
+      "cholesterol": "60 MG",
+      "sodium": "400 MG",
+      "warnings": [
+        "Tinggi kolesterol",
+        "Tinggi natrium",
+        "Dapat menyebabkan hipertensi",
+        "Kurang serat"
+      ]
+    }
+  },
+  {
+    "title": "Nasi Uduk",
+    "img": "assets/images/nutrisi/nasiuduk.jpg",
+    "ingredients": ["Nasi", "Santan", "Daun Salam"],
+    "nutrition": {
+      "calories": "200 Kcal",
+      "fat": "6 G",
+      "saturatedFat": "3 G",
+      "protein": "4 G",
+      "cholesterol": "5 MG",
+      "sodium": "150 MG",
+      "warnings": [
+        "Mengandung santan",
+        "Tinggi lemak jenuh",
+        "Kurang serat",
+        "Kurang sayuran"
+      ]
+    }
+  }, 
+  {
+    "title": "Ketoprak",
+    "img": "assets/images/nutrisi/ketoprak.jpg",
+    "ingredients": ["Tahu", "Bihun", "Lontong", "Kacang Tanah", "Saus Kacang", "Bawang Merah", "Kecap Manis"],
+    "nutrition": {
+      "calories": "250 Kcal",
       "fat": "15 G",
       "saturatedFat": "5 G",
-      "protein": "30 G",
+      "protein": "10 G",
+      "cholesterol": "0 MG",
+      "sodium": "300 MG",
+      "warnings": [
+        "Tinggi kalori",
+        "Tinggi lemak",
+        "Mengandung kacang (alergen)",
+        "Tinggi natrium"
+      ]
+    }
+  },
+  {
+    "title": "Ayam Taliwang",
+    "img": "assets/images/nutrisi/ayamtaliwang.jpg",
+    "ingredients": ["Daging Ayam", "Bumbu Rempah", "Minyak Kelapa"],
+    "nutrition": {
+      "calories": "320 Kcal",
+      "fat": "22 G",
+      "saturatedFat": "9 G",
+      "protein": "28 G",
+      "cholesterol": "85 MG",
+      "sodium": "400 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Tinggi natrium"
+      ]
+    }
+  },
+  {
+    "title": "Tempe Mendoan",
+    "img": "assets/images/nutrisi/tempemendoan.jpg",
+    "ingredients": ["Tempe", "Tepung Terigu", "Bawang Putih", "Air", "Minyak Goreng"],
+    "nutrition": {
+      "calories": "220 Kcal",
+      "fat": "14 G",
+      "saturatedFat": "3 G",
+      "protein": "10 G",
+      "cholesterol": "0 MG",
+      "sodium": "200 MG",
+      "warnings": [
+        "Tinggi lemak",
+        "Tinggi kalori",
+        "Dapat meningkatkan kolesterol",
+        "Tinggi natrium"
+      ]
+    }
+  },
+  {
+    "title": "Coto Makassar",
+    "img": "assets/images/nutrisi/cotomakassar.jpg",
+    "ingredients": ["Daging Sapi", "Santan", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "250 Kcal",
+      "fat": "15 G",
+      "saturatedFat": "7 G",
+      "protein": "20 G",
       "cholesterol": "80 MG",
+      "sodium": "300 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat memicu hipertensi",
+        "Kurang serat"
+      ]
+    }
+  },
+  {
+    "title": "Kerak Telor",
+    "img": "assets/images/nutrisi/keraktelor.jpg",
+    "ingredients": ["Beras Ketan", "Telur", "Serundeng"],
+    "nutrition": {
+      "calories": "270 Kcal",
+      "fat": "15 G",
+      "saturatedFat": "6 G",
+      "protein": "8 G",
+      "cholesterol": "70 MG",
+      "sodium": "350 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Tinggi natrium",
+        "Kurang serat"
+      ]
+    }
+  },
+  {
+    "title": "Kari Ayam",
+    "img": "assets/images/nutrisi/kariayam.jpg",
+    "ingredients": ["Daging Ayam", "Santan", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "290 Kcal",
+      "fat": "22 G",
+      "saturatedFat": "10 G",
+      "protein": "18 G",
+      "cholesterol": "75 MG",
+      "sodium": "400 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat memicu hipertensi",
+        "Mengandung santan"
+      ]
+    }
+  },
+  {
+    "title": "Ayam Kremes",
+    "img": "assets/images/nutrisi/ayamkremes.jpg",
+    "ingredients": ["Daging Ayam", "Tepung", "Minyak Goreng"],
+    "nutrition": {
+      "calories": "330 Kcal",
+      "fat": "22 G",
+      "saturatedFat": "8 G",
+      "protein": "25 G",
+      "cholesterol": "80 MG",
+      "sodium": "450 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Tinggi natrium",
+        "Dapat meningkatkan risiko obesitas"
+      ]
+    }
+  },
+  {
+    "title": "Pecel Lele",
+    "img": "assets/images/nutrisi/pecellele.jpg",
+    "ingredients": ["Lele", "Minyak Goreng", "Sambal"],
+    "nutrition": {
+      "calories": "300 Kcal",
+      "fat": "20 G",
+      "saturatedFat": "7 G",
+      "protein": "20 G",
+      "cholesterol": "80 MG",
+      "sodium": "450 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat meningkatkan risiko jantung",
+        "Mengandung banyak natrium"
+      ]
+    }
+  },
+  {
+    "title": "Sambal Goreng Kentang",
+    "img": "assets/images/nutrisi/sambalkentang.jpg",
+    "ingredients": ["Kentang", "Cabai", "Bumbu"],
+    "nutrition": {
+      "calories": "220 Kcal",
+      "fat": "12 G",
+      "saturatedFat": "3 G",
+      "protein": "3 G",
+      "cholesterol": "0 MG",
+      "sodium": "500 MG",
+      "warnings": [
+        "Tinggi natrium",
+        "Dapat menyebabkan hipertensi",
+        "Kurang protein",
+        "Mengandung lemak jenuh"
+      ]
+    }
+  },
+  {
+    "title": "Kepiting Saus Padang",
+    "img": "assets/images/nutrisi/kepiting.jpg",
+    "ingredients": ["Kepiting", "Saus Padang", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "400 Kcal",
+      "fat": "25 G",
+      "saturatedFat": "10 G",
+      "protein": "30 G",
+      "cholesterol": "100 MG",
       "sodium": "600 MG",
       "warnings": [
-        "TINGGI PROTEIN",
-        "MENGANDUNG KACANG",
-        "RENDAH KARBOHIDRAT",
-        "MENGANDUNG LEMAK JENUH"
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat memicu hipertensi",
+        "Mengandung bahan tambahan"
+      ]
+    }
+  },
+  {
+    "title": "Tongseng Kambing",
+    "img": "assets/images/nutrisi/tongseng.jpg",
+    "ingredients": ["Daging Kambing", "Santang", "Rempah-rempah"],
+    "nutrition": {
+      "calories": "350 Kcal",
+      "fat": "25 G",
+      "saturatedFat": "10 G",
+      "protein": "25 G",
+      "cholesterol": "100 MG",
+      "sodium": "400 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi kolesterol",
+        "Dapat memicu hipertensi",
+        "Mengandung santan"
+      ]
+    }
+  },
+  {
+    "title": "Roti Bakar Cokelat",
+    "img": "assets/images/nutrisi/rotibakar.jpg",
+    "ingredients": ["Roti", "Cokelat", "Mentega"],
+    "nutrition": {
+      "calories": "350 Kcal",
+      "fat": "20 G",
+      "saturatedFat": "10 G",
+      "protein": "6 G",
+      "cholesterol": "20 MG",
+      "sodium": "250 MG",
+      "warnings": [
+        "Tinggi kalori",
+        "Tinggi lemak jenuh"
+      ]
+    }
+  },
+  {
+    "title": "Lapis Legit",
+    "img": "assets/images/nutrisi/lapislegit.jpg",
+    "ingredients": ["Tepung", "Mentega", "Gula"],
+    "nutrition": {
+      "calories": "500 Kcal",
+      "fat": "30 G",
+      "saturatedFat": "15 G",
+      "protein": "6 G",
+      "cholesterol": "100 MG",
+      "sodium": "200 MG",
+      "warnings": [
+        "Tinggi lemak jenuh",
+        "Tinggi gula",
+        "Tinggi kolesterol"
+      ]
+    }
+  },
+  {
+    "title": "Pisang Goreng",
+    "img": "assets/images/nutrisi/pisanggoreng.jpg",
+    "ingredients": ["Pisang", "Minyak Goreng", "Tepung"],
+    "nutrition": {
+      "calories": "300 Kcal",
+      "fat": "18 G",
+      "saturatedFat": "7 G",
+      "protein": "2 G",
+      "cholesterol": "0 MG",
+      "sodium": "200 MG",
+      "warnings": [
+        "Tinggi lemak jenuh"
+      ]
+    }
+  },
+  {
+    "title": "Pisang Ijo",
+    "img": "assets/images/nutrisi/pisangijo.jpg",
+    "ingredients": ["Pisang", "Tepung Terigu", "Pewarna Hijau", "Santan", "Gula"],
+    "nutrition": {
+      "calories": "300 Kcal",
+      "fat": "12 G",
+      "saturatedFat": "6 G",
+      "protein": "3 G",
+      "cholesterol": "0 MG",
+      "sodium": "50 MG",
+      "warnings": [
+        "Tinggi gula",
+        "Tinggi kalori"
       ]
     }
   }

@@ -144,24 +144,35 @@
     background-color: white;
     position: relative;
     margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .image-wrapper {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 210px;
     overflow: hidden;
 }
 
 .image-wrapper img {
     width: 100%;
-    height: 250px;
+    height: 210px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.info-card:hover .image-wrapper img {
+    transform: scale(1.1);
+}
+
+.info-card:hover h3, .info-card:hover p {
+    color: var(--light-green);
 }
 
 .bookmark-icon {
@@ -210,7 +221,7 @@ h3 {
 }
 
 #popup-content {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
     max-width: 1200px;
@@ -225,7 +236,7 @@ h3 {
 }
 
 #bookmark-popup-content {
-     background-color: rgba(0, 0, 0, 0.3);
+     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -291,9 +302,8 @@ h3 {
     margin: 15px 0;
     margin-right: 80px;
     display: flex;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
