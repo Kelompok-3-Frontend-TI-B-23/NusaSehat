@@ -81,7 +81,15 @@ footer {
 }
 
 /* media screen */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px){
+    .bottom-menu{
+        gap:1.3rem;
+    }
+    .bottom-menu a{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 600px) {
     .bottom-menu{
         gap:1.3rem;
     }
@@ -112,3 +120,4 @@ footer {
         font-size: 0.6rem;
     }
 }
+
