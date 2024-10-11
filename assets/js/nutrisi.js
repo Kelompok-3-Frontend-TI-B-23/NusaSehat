@@ -228,18 +228,6 @@ document.getElementById('ingredient').addEventListener('change', () => {
   filterFoodCards(foodData); 
 });
 
-// Fetch data makanan dari file nutrisi.json
-fetch('../assets/data/nutrisi.json')
-  .then(response => response.json())
-  .then(data => {
-    window.foodData = data; // Simpen data makanan ke window
-    displayAllFoodCards(foodData); // Tampilin semua foodcard
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-
-
 // Buat keperluan bookmark
 const bookmarkPopup = document.getElementById('bookmark-popup');
 const bookmarkList = document.getElementById('bookmark-list');
@@ -286,3 +274,14 @@ window.addEventListener('click', (event) => {
     bookmarkPopup.style.display = 'none';
   }
 });
+
+// Fetch data makanan dari file nutrisi.json
+fetch('../assets/data/nutrisi.json')
+  .then(response => response.json())
+  .then(data => {
+    window.foodData = data; // Simpen data makanan ke window
+    displayAllFoodCards(foodData); // Tampilin semua foodcard
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
