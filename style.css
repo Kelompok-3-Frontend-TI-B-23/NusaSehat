@@ -1,8 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --lighter-green: #a7c957;
@@ -17,90 +13,13 @@
 * {
     padding: 0;
     margin:0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Philosopher", sans-serif;
 }
-
 
 html {
     scroll-behavior: smooth;
 }
-/* Home */
-#home {
-    padding: 2rem;
-    /* height: 68vh;  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--beige); 
-}
 
-.home-container {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;
-    max-width: 1200px; 
-    padding: 3rem;
-}
-
-.home-content {
-    flex: 2; 
-    padding: 5%;
-    cursor: default;
-}
-
-.home-title {
-    /* text-align: center; */
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--red);
-}
-
-.home-description {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-    border-radius: 2rem;
-}
-
-.home-btn {
-    padding: 0.8rem 1.5rem;
-    background-color: var(--beige);
-    color: black;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    border-radius: 2rem;
-    border-color: black;
-    border-width: 0.2rem;
-    
-}
-
-.home-btn:hover {
-    background-color: var(--red); 
-    transform: scale(1.1);
-}
-
-.home-image-container {
-    flex: 1; 
-    justify-content: center;
-    align-items: center;
-    /* text-align: right; */
-}
-
-.home-image {
-    justify-self: center;
-    max-width: 25rem; 
-    height: auto;
-    border-radius: 15rem;
-}
 
 /* About */
 #about {
@@ -158,6 +77,82 @@ html {
     }
 }
 
+/* Home */
+
+#home {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige); 
+}
+
+.home-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+    padding: 3rem;
+}
+
+.home-content {
+    flex: 2; 
+    padding: 5%;
+    cursor: default;
+}
+
+.home-title {
+    /* text-align: center; */
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--red);
+}
+
+.home-description {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.home-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--beige);
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: 0.2rem;
+}
+
+.home-btn:hover {
+    background-color: var(--red); 
+    transform: scale(1.1);
+}
+
+.home-image-container {
+    flex: 1; 
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image {
+    justify-self: center;
+    max-width: 25rem; 
+    height: auto;
+    border-radius: 15rem;
+}
+
 /* Recipes */
 #recipes {
     padding: 2rem;
@@ -198,11 +193,10 @@ html {
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 	border-radius: 2rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
+	-ms-overflow-style: none; /* Buat hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Buat hide scrollbar Firefox */
 }
 
-/* Ensure the parent container has relative positioning */
 .recipes-holder {
     position: relative;
     display: flex;
@@ -212,8 +206,7 @@ html {
     flex: 0 0 100%;
   }
   
-  /* Existing button styling */
-  .slider-button {
+.slider-button {
       position: absolute;
       bottom: 3rem;
       right: 4rem;
@@ -224,38 +217,35 @@ html {
       cursor: pointer;
       border-radius: 2rem;
       transition: background-color 0.3s ease;
-  }
+}
 
-  .slider-button a {
+.slider-button a {
     font-size: 1rem;
     color: white;
     text-decoration: none;
-  }
+}
   
-  /* Button hover effect */
-  .slider-button:hover {
-      background-color: var(--light-green);
-      opacity: 1;
-      transform: scale(1.1);
-  }
-  
-  /* Hide scrollbar */
-  .slider::-webkit-scrollbar {
-      display: none;
-  }
-  
-  /* Flex-grow, flex-shrink, flex-basis for images */
-  .recipes-holder img {
-      /* flex: 1 0 100%; */
-      height: auto;
-      width: 100%;
-      
-      scroll-snap-align: start;
-      object-fit: cover;
-  }
+.slider-button:hover {
+    background-color: var(--light-green);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Buat ngehide scrollbar */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Flex-grow, flex-shrink, flex-basis*/
+.recipes-holder img {
+    height: auto;
+    width: 100%;
+    
+    scroll-snap-align: start;
+    object-fit: cover;
+}
 .slider-nav {
 	display: flex;
-    /* background-color: rgb(235, 233, 233); */
     justify-content: center;
 	column-gap: 1rem;
 	position: relative;
@@ -281,7 +271,7 @@ html {
 }
 .slider-nav a.active {
     opacity: 1;
-    background-color: black; /* or another color to highlight the active indicator */
+    background-color: black; 
 }
 
 /* Nutrisi */
@@ -318,8 +308,6 @@ html {
     overflow: hidden;
     box-shadow: 0.3rem 0.3rem 1rem var(--grey);
     box-sizing: border-box;
-    /* opacity: 0.5; */
-    
 }
 
 .box img {
@@ -424,13 +412,6 @@ html {
     
 }
 
-/* @media only screen and (max-width: 1400px) {
-    .overlay h3 {
-        margin-top: 43%; 
-        font-size: 1.3rem;
-    }
-
-} */
 @media only screen and (max-width: 1200px) and (min-width: 850px){
     .overlay {
         font-size: 0.4rem;
