@@ -168,7 +168,7 @@ select:focus {
 }
 
 
-/* INFO CONTAINER (INFO CARD DAN IMAGE) */
+/* FOOD CARD (INFO CARD DAN IMAGE) */
 .infoContainer {
     padding: 20px;
     display: flex;
@@ -522,7 +522,6 @@ select:focus {
 
 .slider-nav {
 	display: flex;
-
     justify-content: center;
 	column-gap: 1rem;
 	position: relative;
@@ -530,6 +529,7 @@ select:focus {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
+    bottom: 2rem;
 }
 
 .slider-nav a {
@@ -711,5 +711,212 @@ tracking-in-expand-fwd {
       -webkit-transform: scale(1);
               transform: scale(1);
       opacity: 1;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    #popup-content, #bookmark-popup-content {
+        width: 90%;
+        max-width: 800px;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .popup-image-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popup-image-wrapper img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #popup-title {
+        font-size: 1.5rem;
+    }
+
+    .nutrition-facts {
+        width: 100%;
+    }
+
+    .nutrition-facts h2 {
+        font-size: 1rem;
+    }
+
+    .fact, .warning-box {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    #show-bookmarks {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .info-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .info-card {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+
+    .hero-search input {
+        width: 600px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #popup-content, #bookmark-popup-content {
+        width: 95%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .popup-image-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popup-image-wrapper img {
+        width: 75%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #popup-title {
+        font-size: 1.2rem;
+    }
+
+    .nutrition-facts {
+        width: 100%;
+        text-align: center;
+    }
+
+    .fact, .warning-box {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    .nutrition-facts h2 {
+        font-size: 0.9rem;
+    }
+
+    #popup-close, #bookmark-close {
+        font-size: 2.5rem;
+    }
+
+    #show-bookmarks {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .info-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .info-card {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+
+    .hero-search input {
+        width: 100%;
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #popup-content, #bookmark-popup-content {
+        padding: 5px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .popup-image-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popup-image-wrapper img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #popup-title {
+        font-size: 1rem;
+    }
+
+    .nutrition-facts {
+        width: 100%;
+        text-align: center;
+    }
+
+    .fact, .warning-box {
+        font-size: 0.9rem;
+    }
+
+    .nutrition-facts h2 {
+        font-size: 0.8rem;
+    }
+
+    #show-bookmarks {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        width: 90%;
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    .info-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .info-card {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .hero-search input {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 6px;
     }
 }
