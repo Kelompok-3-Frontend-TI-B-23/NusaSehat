@@ -15,7 +15,7 @@ h3 {
     background-image: url('../images/gambarhero.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 75vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
